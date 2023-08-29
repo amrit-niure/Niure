@@ -10,6 +10,9 @@
 
 html {
   scroll-behavior: smooth;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
 }
 .container {
   max-width: 968px;
@@ -25,12 +28,12 @@ html {
 .main {
   overflow: hidden;
 }
-.header{
-  transition: .4s;
+.header {
+  transition: 0.4s;
 }
 .section {
   padding: 4.5rem 0 1rem;
 }
-li{
+li {
   list-style-type: none;
 }

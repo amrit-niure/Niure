@@ -18,11 +18,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className=''>
       <body className={poppins.className}>
         <Providers>
         <Navbar />
+        <div className='bg-slate-50 dark:bg-slate-900  transition-all ease-in-out duration-200 '>
+
         {children}
+        </div>
         {/* <Footer /> */}
         </Providers>
       </body>
