@@ -31,7 +31,7 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
     },
   ];
   return (
-    <div className="absolute top-0 right-0 flex flex-col bg-slate-100 w-[200px] h-[100vh] text-primary transition ease-in-out duration-200 dark:bg-slate-900">
+    <div className="absolute top-0 right-0 flex flex-col bg-slate-100 w-[200px] h-[100vh] text-primary transition ease-in-out duration-200 dark:bg-slate-900 z-10">
       <div className="w-full h-header  px-4 flex items-center ">
         <X
           className="ml-auto cursor-pointer h-10 w-10 hover:bg-slate-200 px-2 rounded-full text-xl"
@@ -62,17 +62,26 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
           {theme === "dark" ? "Light" : "Dark"} Mode
         </div>
       </div>
-      <div className="text-sm mt-auto p-2 flex items-center gap-4">
+      <div className="text-sm mt-auto px-2 flex items-center gap-4">
+        <div className="flex flex-col">
+
         <span className="dark:text-slate-100">Social Links</span>
-        <a
-          href="https://www.linkedin.com/in/amrit-niure-313a75230/"
-          target="_blank"
-        >
-          <BsLinkedin className=" text-primary dark:text-white" />
-        </a>
-        <a href="https://github.com/amrit-niure" target="_blank">
-          <BsGithub className=" text-primary dark:text-white" />
-        </a>
+        <span className="w-28 h-[1px] bg-primary rounded-full "></span>
+        </div>
+        <div className="flex gap-2 ml-auto pr-4">
+          <a
+            href="https://www.linkedin.com/in/amrit-niure-313a75230/"
+            target="_blank"
+          >
+            <BsLinkedin className=" text-primary dark:text-white" />
+          </a>
+          <a href="https://github.com/amrit-niure" target="_blank">
+            <BsGithub className=" text-primary dark:text-white" />
+          </a>
+        </div>
+      </div>
+      <div className="pb-2 dark:text-slate-100">
+       <span className="text-xs italic"> &copy; Amrit Niure 2023</span>
       </div>
     </div>
   );
