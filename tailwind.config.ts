@@ -6,13 +6,34 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode : 'class',
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'primary' : "#154c79",
+        "secondary" : "#FCA311",
+        "semi-white" : "#E5E5E5"
       },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
+      fontSize: {
+        'biggest': '1.75rem',
+        'h1': '1.5rem',
+        'h2': '1.25rem',
+        'h3': '1rem',
+        'normal': '.938rem',
+        'small': '.813rem',
+        'smaller': '.75rem',
+        'tiny': '.625rem',
+      },
+      fontWeight: {
+        'medium': '500',
+        'semibold': '600',
+      },
+      height : {
+        'header' : '3.5rem'
+      }
     },
   },
   plugins: [],
