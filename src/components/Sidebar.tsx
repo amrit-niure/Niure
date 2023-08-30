@@ -14,7 +14,7 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
   const options = [
     {
       id: 1,
-      name: "Posts",
+      name: "Post",
       Icon: BookOpen,
       href: "/posts",
     },
