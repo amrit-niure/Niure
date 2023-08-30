@@ -26,6 +26,7 @@ const config: Config = {
         'small': '.813rem',
         'smaller': '.75rem',
         'tiny': '.625rem',
+       
       },
       fontWeight: {
         'medium': '500',

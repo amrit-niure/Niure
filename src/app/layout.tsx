@@ -1,10 +1,11 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
 import Footer from '@/components/Footer'
 import Providers from '@/app/providers'
-
+import {Poppins,K2D} from 'next/font/google'
+interface LandingProps {}
+const k2d = K2D({subsets: ['latin'], weight: '400'})
 const poppins = Poppins({subsets: ["latin"], weight: '400'})
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=''>
-      <body className={poppins.className}>
+      <body className={k2d.className}>
         <Providers>
         <Navbar />
         <div className='bg-slate-50 dark:bg-slate-900  transition-all ease-in-out duration-200 '>

@@ -1,21 +1,80 @@
 import { FC } from "react";
-
+import Button from "./Button";
+import { K2D } from "next/font/google";
+import Image from "next/image";
+import {
+  Docker,
+  Github,
+  Mongodb,
+  Next,
+  Node,
+  ReactSvg,
+  Redis,
+  Tailwind,
+} from "@/components/Icons/svg";
+import { Tooltip } from "@mui/material";
 interface LandingProps {}
-
+const k2d = K2D({ subsets: ["latin"], weight: "400" });
 const Landing: FC<LandingProps> = ({}) => {
   return (
-    <div className="px-4 flex  flex-col items-center border-2 justify-center pt-[15vh] ">
-      <h1 className="text-2xl text-center ">
-        <span className="text-3xl">👋</span>, I am{" "}
-        <span className="font-bold">Amrit Niure , </span>
-        <span className="font-bold">
-          {" "}
-          Software <br /> Developer
-        </span>{" "}
-      </h1>
-      <p className="text-center italic">
-        Turning Complex Business Challenges into Elegant Solutions.{" "}
-      </p>
+    <div
+      className={`px-4 flex gap-16 flex-col items-center  justify-center pt-[15vh] md:pt-[25vh] ${k2d.className}`}
+    >
+      <div className="flex gap-2 flex-col items-center justify-center">
+        <h1 className="text-3xl text-center ">
+          <span className="text-3xl">👋</span>, I am{" "}
+          <span className="font-bold">Amrit Niure , </span>
+          <span className="font-bold">
+            {" "}
+            Software <br /> Developer
+          </span>{" "}
+        </h1>
+        <p className="text-center text-lg italic pb-4">
+          Turning Complex Business Challenges into Elegant Solutions.{" "}
+        </p>
+        <Button> 🪶 Hire Me</Button>
+      </div>
+      <div className="w-full flex flex-col items-center justify-center ">
+        <p
+          className={`text-center md:text-left w-lg md:w-[750px] bg-slate-100 dark:bg-slate-800 italic p-4 rounded-sm `}
+        >
+          🤝❝ Greetings! I am <b>software developer</b>  of Nepali origin, currently pursuing Bachelor of
+          Business Information Systems at AIHE(Exp. 2025). Rooted in innovation,
+          I consistently conceive novel ideas aimed at enhancing lives while
+          staying abreast of evolving tools and technologies.❞
+        </p>
+      </div>
+      <div className="flex gap-4 flex-col">
+        <h1 className="text-h1 underline text-center pb-8">
+          Tools and Technologies I Use
+        </h1>
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 w-lg md:w-[750px] px-2">
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <Node />
+          </div>
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <Mongodb />
+          </div>
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <Next />
+          </div>
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <ReactSvg />
+          </div>
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <Tailwind />
+          </div>
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <Docker />
+          </div>
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <Github />
+          </div>
+          <div className="hover:bg-slate-100 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+            <Redis />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
