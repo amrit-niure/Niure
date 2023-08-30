@@ -20,14 +20,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=''>
-      <body className={k2d.className}>
+      <body className={`${k2d.className} dark:bg-slate-900`}>
         <Providers>
         <Navbar />
         <div className='bg-slate-50 dark:bg-slate-900  transition-all ease-in-out duration-200 '>
 
         {children}
         </div>
-        {/* <Footer /> */}
+        <div className='box'>
+
+        <Footer />
+        </div>
         </Providers>
       </body>
     </html>

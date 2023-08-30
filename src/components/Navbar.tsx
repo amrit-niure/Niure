@@ -11,7 +11,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   const [show, setShow] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
   return (
-    <header className="flexbox bg-slate-50 dark:bg-slate-900 shadow-md transition-all ease-in-out duration-200 ">
+    <header className="sticky top-0 left-0 flexbox bg-slate-50 dark:bg-slate-900 shadow-sm transition-all ease-in-out duration-200 z-10">
       <nav className="container h-header flex items-center text-primary w-full ">
         <Link href={"/"} className="font-semibold mr-auto dark:text-slate-100 text-lg">
           Amrit

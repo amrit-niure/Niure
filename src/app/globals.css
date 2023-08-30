@@ -37,3 +37,11 @@ html {
 li {
   list-style-type: none;
 }
+
+.box {
+  --mask:
+    radial-gradient(67.08px at 50% 90.00px,#e00909 99%,#44e61c00 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#ee0a0a00 99%,#ed0404 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
