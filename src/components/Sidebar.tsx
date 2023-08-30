@@ -4,6 +4,7 @@ import { X, BookOpen, Code, User2, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { Options } from "@/types/types";
 interface SidebarProps {
   setShow: (value: boolean) => void;
 }

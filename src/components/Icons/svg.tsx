@@ -117,4 +117,20 @@ const Tailwind = () => (
 
 export {Node,Mongodb,Next,ReactSvg,MySql,Postgres,Tailwind,Redis,Github,Docker,Prisma};
 
+export const Icons = {
+    Node,
+    Mongodb,
+    Next,
+    ReactSvg,
+    MySql,
+    Postgres,
+    Tailwind,
+    Redis,
+    Github,
+    Docker,
+    Prisma,
+  };
+  
+  export type Icon = keyof typeof Icons; 
+
 

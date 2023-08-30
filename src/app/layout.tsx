@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import Providers from '@/app/providers'
 import {Poppins,K2D} from 'next/font/google'
 interface LandingProps {}
-const k2d = K2D({subsets: ['latin'], weight: '400'})
+const k2d = K2D({subsets: ['latin'], weight: '500'})
 const poppins = Poppins({subsets: ["latin"], weight: '400'})
 
 export const metadata: Metadata = {
