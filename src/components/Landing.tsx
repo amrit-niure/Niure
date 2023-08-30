@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Button from "./Button";
-import { K2D } from "next/font/google";
 import Image from "next/image";
 import {
   Docker,
@@ -16,11 +15,10 @@ import {
 import { Tooltip } from "@mui/material";
 
 interface LandingProps {}
-const k2d = K2D({ subsets: ["latin"], weight: "400" });
 const Landing: FC<LandingProps> = ({}) => {
   return (
     <div
-      className={`px-4 flex gap-16 flex-col items-center  justify-center pt-[15vh]  md:pt-[25vh] ${k2d.className}`}
+      className={`px-4 flex gap-16 flex-col items-center  justify-center pt-[15vh]  md:pt-[25vh]`}
     >
       <div className="flex gap-2 flex-col items-center justify-center">
         <h1 className="text-3xl text-center ">

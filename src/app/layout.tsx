@@ -3,10 +3,11 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Providers from '@/app/providers'
-import {Poppins,K2D} from 'next/font/google'
+import {Poppins,K2D,Space_Grotesk} from 'next/font/google'
 interface LandingProps {}
 const k2d = K2D({subsets: ['latin'], weight: '500'})
 const poppins = Poppins({subsets: ["latin"], weight: '400'})
+const space_grotesk = Space_Grotesk({subsets: ["latin"], weight: '400'})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=''>
-      <body className={`${k2d.className} dark:bg-slate-900`}>
+      <body className={`${space_grotesk.className} dark:bg-slate-900`}>
         <Providers>
         <Navbar />
         <div className='bg-slate-50 dark:bg-slate-900  transition-all ease-in-out duration-200 '>
