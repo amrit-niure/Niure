@@ -18,15 +18,15 @@ const Footer: FC<FooterProps> = ({}) => {
         </div>
         <div>
           <ul className="flexbox gap-4 ">
-            <li className="cursor-pointer hover:underline ">About</li>
+            <Link href={'/about'} className="cursor-pointer hover:underline ">About</Link>
             <span className="w-[1px] h-5 bg-white"></span>
-            <li className="cursor-pointer hover:underline ">Projects</li>
-            <span className="w-[1px] h-5 bg-white"></span>
-
-            <li className="cursor-pointer hover:underline ">Services</li>
+            <Link href={'/projects'} className="cursor-pointer hover:underline ">Projects</Link>
             <span className="w-[1px] h-5 bg-white"></span>
 
-            <li className="cursor-pointer hover:underline ">Testimonial</li>
+            <Link href={'/'} className="cursor-pointer hover:underline ">Services</Link>
+            <span className="w-[1px] h-5 bg-white"></span>
+
+            <Link href={'/'} className="cursor-pointer hover:underline ">Testimonial</Link>
           </ul>
         </div>
         {/* icons */}

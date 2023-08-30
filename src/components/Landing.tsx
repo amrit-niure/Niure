@@ -11,9 +11,10 @@ import {
   ReactSvg,
   Redis,
   Tailwind,
-  Prisma
+  Prisma,
 } from "@/components/Icons/svg";
 import { Tooltip } from "@mui/material";
+
 interface LandingProps {}
 const k2d = K2D({ subsets: ["latin"], weight: "400" });
 const Landing: FC<LandingProps> = ({}) => {
@@ -51,31 +52,31 @@ const Landing: FC<LandingProps> = ({}) => {
           Tools and Technologies I Use
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 w-lg md:w-[750px] px-2">
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Node />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Mongodb />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Next />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <ReactSvg />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Tailwind />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Docker />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Github />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Redis />
           </div>
-          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer">
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Prisma />
           </div>
         </div>

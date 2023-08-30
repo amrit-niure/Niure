@@ -30,7 +30,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </div>
         {/* Mobile nav */}
         <div className="flex md:hidden">
-          <Menu onClick={() => setShow(true)} />
+          <Menu onClick={() => setShow(true)}  className="dark:text-slate-100"/>
           {show && (
             <Sidebar setShow={setShow} />
           )}
