@@ -21,10 +21,10 @@ const Landing: FC<LandingProps> = ({}) => {
       <div className="flex gap-2 flex-col items-center justify-center">
         <h1 className="text-3xl text-center ">
           <span className="text-3xl">👋</span>, I am{" "}
-          <span className="font-bold ">Amrit Niure , </span>
+          <span className="font-bold ">Amrit Niure , </span> <br />
           <span className="font-bold">
             {" "}
-            Software <br /> Developer
+            Software Developer
           </span>{" "}
         </h1>
         <p className="text-center text-lg italic pb-4">
