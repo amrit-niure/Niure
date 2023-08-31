@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Button from "./Button";
-import Image from "next/image";
 import {
   Docker,
   Github,
@@ -12,7 +11,6 @@ import {
   Tailwind,
   Prisma,
 } from "@/components/Icons/svg";
-import { Tooltip } from "@mui/material";
 
 interface LandingProps {}
 const Landing: FC<LandingProps> = ({}) => {
@@ -23,7 +21,7 @@ const Landing: FC<LandingProps> = ({}) => {
       <div className="flex gap-2 flex-col items-center justify-center">
         <h1 className="text-3xl text-center ">
           <span className="text-3xl">👋</span>, I am{" "}
-          <span className="font-bold">Amrit Niure , </span>
+          <span className="font-bold ">Amrit Niure , </span>
           <span className="font-bold">
             {" "}
             Software <br /> Developer

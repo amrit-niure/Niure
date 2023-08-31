@@ -35,8 +35,8 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
     <div className="absolute top-0 right-0 flex flex-col bg-slate-100 w-[200px] h-[100vh] text-primary transition ease-in-out duration-200 dark:bg-slate-900 z-10">
       <div className="w-full h-header  px-4 flex items-center ">
         <X
-          className="ml-auto cursor-pointer h-10 w-10 hover:bg-slate-200 px-2 rounded-full text-xl"
-          size={28}
+          className="ml-auto cursor-pointer h-10 w-10 hover:bg-slate-200 px-2 rounded-full text-xl dark:text-slate-100 hover:text-primary"
+          size={25}
           onClick={() => setShow(false)}
         />
       </div>
