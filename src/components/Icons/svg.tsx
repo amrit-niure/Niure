@@ -128,7 +128,7 @@ export const Icons = {
     Redis,
     Github,
     Docker,
-    Prisma,
+    Prisma,   
   };
   
   export type Icon = keyof typeof Icons; 

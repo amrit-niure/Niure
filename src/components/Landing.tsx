@@ -37,14 +37,13 @@ const Landing: FC<LandingProps> = ({}) => {
           className={`text-center md:text-left w-lg md:w-[750px] bg-slate-100 dark:bg-slate-800 italic p-4 rounded-sm `}
         >
           🤝❝ Greetings! I am <b>software developer</b> of Nepali origin,
-          currently pursuing Bachelor of Business Information Systems at
-          AIHE(Exp. 2025). Rooted in innovation, I consistently conceive novel
+          currently pursuing Bachelor of Business Information Systems (Exp. 2025). Rooted in innovation, I consistently conceive novel
           ideas aimed at <b> enhancing lives</b> while staying abreast of evolving tools
           and technologies.❞
         </p>
       </div>
       <div className="flex gap-8 flex-col items-center justify-items-center">
-        <h1 className="text-h1 underline text-center ">
+        <h1 className="text-h1 underline text-center font-semibold">
           Tools and Technologies I Use
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 w-lg md:w-[750px] px-2">
