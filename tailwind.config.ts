@@ -14,6 +14,7 @@ const config: Config = {
         'primary' : "purple",
         'main' : 'rgb(2 6 23);',
         'main-light' : 'rgba(2, 6, 23,0.6);',
+        'background' :'rgb(248 250 252)' ,
         "secondary" : "#FCA311",
         "semi-white" : "#E5E5E5"
       },

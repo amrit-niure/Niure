@@ -1,11 +1,12 @@
 "use client";
 import React, { FC } from "react";
-import { useFormik } from "formik";
+import { useFormik,FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { BiMailSend, BiMessageRounded } from "react-icons/bi";
 import { ArrowRight, Pen } from "lucide-react";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiTwotonePhone } from "react-icons/ai";
+import Button from "./Button";
 
 interface ContactProps {}
 
@@ -23,14 +24,20 @@ const Contact: FC<ContactProps> = () => {
     email: "",
     project: "",
   };
-
+  type MyFormValues = {
+    name: string;
+    email: string;
+    project: string;
+  };
+  
   const onSubmit = (values: {
     name: string;
     email: string;
     project: string;
-  }) => {
+  },onSubmitProps:FormikHelpers<MyFormValues>) => {
     // Handle form submission here
-    console.log(values);
+    alert(values.name)
+onSubmitProps.resetForm()
   };
 
   const formik = useFormik({
@@ -45,7 +52,7 @@ const Contact: FC<ContactProps> = () => {
         <span className="text-h1 font-semibold">Get in Touch</span>
         <h2 className="hidden md:flex">Contact Me</h2>
       </div>
-      <div className=" flex flex-col md:flex-row gap-16">
+      <div className=" flex flex-col md:flex-row gap-16 md:gap-4">
         {/* first */}
         <div className="flex-1 flex flex-col gap-8">
           <h3 className="flexbox text-h2 font-semibold">Talk to me</h3>
@@ -99,11 +106,11 @@ const Contact: FC<ContactProps> = () => {
           </div>
         </div>
         {/* second col */}
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col gap-8">
         <h3 className="flexbox text-h2 font-semibold">Write Me Your Project</h3>
-          <form onSubmit={formik.handleSubmit}>
-            <div className="flex flex-col">
-              <label htmlFor="name">Name</label>
+          <form onSubmit={formik.handleSubmit} className=" flex flex-col gap-8">
+            <div className="flex flex-col relative">
+              <label htmlFor="name" className="absolute top-[-0.8rem] left-[1.25rem] text-main-light bg-slate-50 px-1.5 z-20">Name</label>
               <input
                 type="text"
                 id="name"
@@ -112,14 +119,15 @@ const Contact: FC<ContactProps> = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.name}
+                className=" border-[3px] border-slate-500 bg-background outline-none px-6 py-4 rounded-xl "
               />
               {formik.touched.name && formik.errors.name ? (
                 <div>{formik.errors.name}</div>
               ) : null}
             </div>
 
-            <div>
-              <label htmlFor="email">Email</label>
+            <div className="relative">
+              <label htmlFor="email"  className="absolute top-[-0.8rem] left-[1.25rem] text-main-light bg-slate-50 px-1.5 z-20">Email</label>
               <input
                 type="text"
                 id="email"
@@ -128,30 +136,32 @@ const Contact: FC<ContactProps> = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
+                className=" border-[3px] border-slate-500 bg-background outline-none px-6 py-4 w-full rounded-xl "
               />
               {formik.touched.email && formik.errors.email ? (
                 <div>{formik.errors.email}</div>
               ) : null}
             </div>
 
-            <div>
-              <label htmlFor="project">Project</label>
+            <div className="relative">
+              <label htmlFor="project" className="absolute top-[-0.8rem] left-[1.25rem] text-main-light bg-slate-50 px-1.5 z-20">Project</label>
               <textarea
                 id="project"
                 name="project"
                 cols={30}
-                rows={10}
+                rows={5}
                 placeholder="Write Your Project here."
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.project}
+                className=" border-[3px] border-slate-500 bg-background outline-none px-6 py-4 w-full rounded-xl resize-none "
               ></textarea>
               {formik.touched.project && formik.errors.project ? (
                 <div>{formik.errors.project}</div>
               ) : null}
             </div>
 
-            <button type="submit">Send Message</button>
+            <Button type="submit" className="text-lg w-fit" size={"lg"}>Send </Button>
           </form>
         </div>
       </div>
