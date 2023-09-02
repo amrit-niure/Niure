@@ -106,7 +106,7 @@ onSubmitProps.resetForm()
           </div>
         </div>
         {/* second col */}
-        <div className="flex-1 flex flex-col gap-8">
+        <div className="flex-1 flex flex-col gap-8 sm:px-8">
         <h3 className="flexbox text-h2 font-semibold">Write Me Your Project</h3>
           <form onSubmit={formik.handleSubmit} className=" flex flex-col gap-8">
             <div className="flex flex-col relative">
