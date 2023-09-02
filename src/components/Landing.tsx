@@ -16,11 +16,11 @@ interface LandingProps {}
 const Landing: FC<LandingProps> = ({}) => {
   return (
     <div
-      className={`px-4 flex gap-16 flex-col items-center  justify-center pt-[15vh]  md:pt-[25vh]`}
+      className={`px-4 flex gap-16 flex-col items-center  justify-center pt-[15vh]  md:pt-[25vh] text-lg`}
     >
       <div className="flex gap-2 flex-col items-center justify-center">
         <h1 className="text-3xl text-center ">
-          <span className="text-3xl">👋</span>, I am{" "}
+          <span className="text-4xl">👋</span>, I am{" "}
           <span className="font-bold ">Amrit Niure , </span> <br />
           <span className="font-bold">
             {" "}
@@ -36,14 +36,14 @@ const Landing: FC<LandingProps> = ({}) => {
         <p
           className={`text-center md:text-left w-lg md:w-[750px] bg-slate-100 dark:bg-slate-800 italic p-4 rounded-sm `}
         >
-          🤝❝ Greetings! I am <b>software developer</b> of Nepali origin,
+          <span className="text-xl">🤝</span>❝ Greetings! I am <b>software developer</b> of Nepali origin,
           currently pursuing Bachelor of Business Information Systems (Exp. 2025). Rooted in innovation, I consistently conceive novel
           ideas aimed at <b> enhancing lives</b> while staying abreast of evolving tools
           and technologies.❞
         </p>
       </div>
       <div className="flex gap-8 flex-col items-center justify-items-center">
-        <h1 className="text-h1 underline text-center font-semibold">
+        <h1 className="text-biggest  text-center font-bold">
           Tools and Technologies I Use
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 w-lg md:w-[750px] px-2">

@@ -46,10 +46,10 @@ const Projects: FC<ProjectsProps> = ({}) => {
   return (
     <div className="flexbox flex-col gap-8 group">
       <div>
-        <h1 className="text-center text-h1 font-semibold underline">
+        <h1 className="text-center text-biggest font-bold ">
           Projects
         </h1>
-        <p className="text-center  italic">
+        <p className="text-center ">
           Discover a selection of my recent projects showcasing my creativity
           and skills in action.
         </p>

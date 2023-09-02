@@ -7,7 +7,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <div className="flexbox bg-purple-950 dark:bg-slate-950 ">
+    <div className="flexbox bg-purple-950 dark:bg-[#271f4d]   ">
       <div className="container flexbox flex-col gap-8 text-white pt-16 py-8">
         <div className="flexbox flex-col gap-4">
           <h1 className="text-biggest font-bold ">Amrit Niure</h1>
