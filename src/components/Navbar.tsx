@@ -13,8 +13,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
   return (
     <header className="sticky top-0 left-0 flexbox bg-slate-50 dark:bg-slate-900 shadow-sm transition-all ease-in-out duration-200 z-10">
       <nav className="container h-header flex items-center text-primary w-full ">
-        <Link href={"/"} className="font-semibold mr-auto dark:text-slate-100 text-lg">
-          Amrit
+        <Link href={"/"} className=" mr-auto dark:text-slate-100 text-lg">
+        <b>Amrit</b>  Niure.
         </Link>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-4 dark:text-slate-100">

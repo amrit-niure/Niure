@@ -4,7 +4,7 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 interface FloatingIconsProps {};
 
 const FloatingIcons: FC<FloatingIconsProps> = ({}) => {
-  return <div className="absolute left-0 md:left-[15vw] top-[40vh] flex flex-col gap-4 items-center ">
+  return <div className="absolute left-0 md:left-[15vw] top-[30vh] md:top-[40vh] flex flex-col gap-4 items-center ">
   <a
     href="https://www.linkedin.com/in/amrit-niure-313a75230/"
     target="_blank"
@@ -19,7 +19,7 @@ const FloatingIcons: FC<FloatingIconsProps> = ({}) => {
   >
     <BsGithub className="text-lg text-primary dark:text-white" />
   </a>
-  <span className="w-0.5 h-20 bg-primary dark:bg-slate-100  "></span>
+  <span className="w-0.5 h-20 bg-primary hidden md:flex dark:bg-slate-100  "></span>
 </div>
 };
 
