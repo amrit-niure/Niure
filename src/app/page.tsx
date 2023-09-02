@@ -1,6 +1,7 @@
 import FloatingIcons from "@/components/FloatingIcons";
 import Landing from "@/components/Landing";
 import Projects from "@/components/Projects";
+import Services from "@/components/Services";
 
 import { FC } from "react";
 
@@ -16,6 +17,7 @@ const page: FC<pageProps> = ({}) => {
         <FloatingIcons />
         </div>
         <Projects />
+        <Services />
       </div>
     </main>
   );

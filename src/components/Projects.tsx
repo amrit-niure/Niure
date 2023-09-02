@@ -45,7 +45,11 @@ const projectsOptions = [
 const Projects: FC<ProjectsProps> = ({}) => {
   return (
     <div className="flexbox flex-col gap-8 group">
+      <div>
+
       <h1 className="text-center text-h1 font-semibold underline">Projects</h1>
+      <p className='text-center  italic'>Discover a selection of my recent projects showcasing my creativity and skills in action.</p>
+      </div>
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {/* card  */}
         {projectsOptions.map((project) => (
