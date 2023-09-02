@@ -45,7 +45,8 @@ const Contact: FC<ContactProps> = () => {
         <span className="text-h1 font-semibold">Get in Touch</span>
         <h2 className="hidden md:flex">Contact Me</h2>
       </div>
-      <div className=" flex flex-col md:flex-row ">
+      <div className=" flex flex-col md:flex-row gap-16">
+        {/* first */}
         <div className="flex-1 flex flex-col gap-8">
           <h3 className="flexbox text-h2 font-semibold">Talk to me</h3>
           <div className="px-8 flex flex-col gap-4">
