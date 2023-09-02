@@ -10,13 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // 'primary' : "#154c79",
-        'primary' : "purple",
-        'main' : 'rgb(2 6 23);',
-        'main-light' : 'rgba(2, 6, 23,0.6);',
-        'background' :'rgb(248 250 252)' ,
-        "secondary" : "#FCA311",
-        "semi-white" : "#E5E5E5"
+        'primary' : '#6b21a8',  //purple-800
+        'primary-light' : '#f1f5f9',  //purple-800
+        'secondary' : '#c084fc', //purple-400
+        'primary-dark' : '#0f172a', // slate-900
+        'light-gray': '#14b8a6', //teal-500
+        'light-background' :'#f8fafc', // slate-50
+        'dark-background' :' #0f172a' , //slate-900
+        'darker' :'#020617' ,  //slate-950
+        'footer': '#3b0764', //purple-950
+        'footer-dark': '#4a044e', //dark purple
+        'shadow-dark': '#475569', 
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

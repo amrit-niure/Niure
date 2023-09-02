@@ -11,18 +11,18 @@ const Navbar: FC<NavbarProps> = ({}) => {
   const [show, setShow] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
   return (
-    <header className="sticky top-0 left-0 flexbox bg-slate-50 dark:bg-slate-900 shadow-sm transition-all ease-in-out duration-200 z-10">
+    <header className="sticky top-0 left-0 flexbox bg-light-background dark:bg-dark-background shadow-sm transition-all ease-in-out duration-200 z-10">
       <nav className="container h-header flex items-center text-primary w-full ">
-        <Link href={"/"} className=" mr-auto dark:text-slate-100 text-lg">
+        <Link href={"/"} className=" mr-auto dark:text-primary-light text-lg">
         <b>Amrit</b>  Niure.
         </Link>
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-4 dark:text-slate-100">
+        <div className="hidden md:flex items-center gap-4 dark:text-primary-light">
           <Link href={"/posts"} className=" hover:opacity-80">
             Posts
           </Link>
           <div
-            className="hover:bg-slate-100 dark:hover:text-slate-900 rounded-full p-2  dark:text-slate-100"
+            className="hover:bg-primary-light dark:hover:text-primary-dark rounded-full p-2  dark:text-primary-light"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
@@ -30,7 +30,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </div>
         {/* Mobile nav */}
         <div className="flex md:hidden">
-          <Menu onClick={() => setShow(true)}  className="dark:text-slate-100"/>
+          <Menu onClick={() => setShow(true)}  className="dark:text-primary-light"/>
           {show && (
             <Sidebar setShow={setShow} />
           )}

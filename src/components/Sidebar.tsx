@@ -47,7 +47,7 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
             <li className="group" onClick={() => setShow(false)}>
               <Link
                 href={option.href}
-                className="text-gray-700 hover:text-purple-800 dark:hover:text-slate-900 hover:bg-gray-50 group flex gap-3 p-2 text-sm  dark:text-slate-200 items-center border-b-[1px]"
+                className="text-gray-700 hover:text-purple-800 dark:hover:text-slate-900 hover:bg-gray-50 group flex gap-3 p-2 text-sm  dark:text-slate-200 items-center "
               >
                 <Icon size={20} />
                 <span className="truncate">{option.name}</span>
