@@ -46,9 +46,13 @@ const Projects: FC<ProjectsProps> = ({}) => {
   return (
     <div className="flexbox flex-col gap-8 group">
       <div>
-
-      <h1 className="text-center text-h1 font-semibold underline">Projects</h1>
-      <p className='text-center  italic'>Discover a selection of my recent projects showcasing my creativity and skills in action.</p>
+        <h1 className="text-center text-h1 font-semibold underline">
+          Projects
+        </h1>
+        <p className="text-center  italic">
+          Discover a selection of my recent projects showcasing my creativity
+          and skills in action.
+        </p>
       </div>
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {/* card  */}
@@ -84,18 +88,23 @@ const Projects: FC<ProjectsProps> = ({}) => {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col indent-1 absolute bottom-0  bg-white bg-opacity-70  w-full p-2  ">
-                <h1 className="text-h2 font-semibold">Confession</h1>
-                <a
-                  href={project.live}
-                  target="_blank"
-                  className="text-sm  flex items-center gap-1"
-                >
-                  Live Demo <MoveRight size={18} />
-                  <Link href="/projects" className="flex gap-2 ml-auto">
+              <div className="flex indent-1 absolute bottom-0  bg-white bg-opacity-70  w-full p-2  ">
+                <div className="">
+                  <h1 className="text-h2 font-semibold">Confession</h1>
+                  <a href={project.live} target="_blank" className="text-sm  ">
+                    <span className="flex items-center gap-2">
+                      Live Demo <MoveRight size={18} />
+                    </span>
+                  </a>
+                </div>
+          
+                <Link href="/projects" className="flex gap-2 ml-auto">
+                  <span className=" flex items-center gap-2 mt-auto">
+                    {" "}
                     More Info <Info size={18} />{" "}
-                  </Link>
-                </a>
+                  </span>
+                </Link>
+           
               </div>
             </div>
           </div>

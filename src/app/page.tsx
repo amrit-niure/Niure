@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import FloatingIcons from "@/components/FloatingIcons";
 import Landing from "@/components/Landing";
 import Projects from "@/components/Projects";
@@ -18,6 +19,7 @@ const page: FC<pageProps> = ({}) => {
         </div>
         <Projects />
         <Services />
+        <Contact />
       </div>
     </main>
   );
