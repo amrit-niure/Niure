@@ -44,12 +44,12 @@ const projectsOptions = [
 
 const Projects: FC<ProjectsProps> = ({}) => {
   return (
-    <div className="flexbox flex-col gap-8 group">
+    <div className="flexbox  flex-col w-full gap-8 group" id="projects">
       <div>
-        <h1 className="text-center text-biggest font-bold ">
+        <h1 className="text-center text-h1 font-bold ">
           Projects
         </h1>
-        <p className="text-center ">
+        <p className="text-center  text-p-text dark:text-p-text-dark ">
           Discover a selection of my recent projects showcasing my creativity
           and skills in action.
         </p>
@@ -63,8 +63,6 @@ const Projects: FC<ProjectsProps> = ({}) => {
           >
             <div className="relative overflow-hidden group  h-full w-full ">
               <Image
-                // width={400}
-                // height={600}
                 fill
                 alt="project"
                 src={project.img}
@@ -92,19 +90,18 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 <div className="">
                   <h1 className="text-h2 font-semibold">Confession</h1>
                   <a href={project.live} target="_blank" className="text-sm  ">
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-2 text-p-text ">
                       Live Demo <MoveRight size={18} />
                     </span>
                   </a>
                 </div>
           
                 <Link href="/projects" className="flex gap-2 ml-auto">
-                  <span className=" flex items-center gap-2 mt-auto">
+                  <span className=" flex items-center gap-2 mt-auto  text-p-text ">
                     {" "}
                     More Info <Info size={18} />{" "}
                   </span>
                 </Link>
-           
               </div>
             </div>
           </div>

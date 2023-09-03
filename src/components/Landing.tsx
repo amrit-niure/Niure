@@ -27,7 +27,7 @@ const Landing: FC<LandingProps> = ({}) => {
             Software Developer
           </span>{" "}
         </h1>
-        <p className="text-center text-lg italic pb-4">
+        <p className="text-center text-lg italic pb-4  text-p-text dark:text-p-text-dark">
           Turning Complex Business Challenges into Elegant Solutions.{" "}
         </p>
         <div className="flex gap-4 ">
@@ -38,9 +38,9 @@ const Landing: FC<LandingProps> = ({}) => {
       </div>
       <div className="w-full flex flex-col items-center justify-center ">
         <p
-          className={`text-center md:text-left w-lg md:w-[750px] bg-slate-100 dark:bg-slate-800 italic p-4 rounded-sm `}
+          className={`text-center md:text-left w-lg md:w-[968px] bg-slate-100 dark:bg-slate-800 italic p-4 rounded-sm  text-p-text dark:text-p-text-dark`}
         >
-          <span className="text-xl">🤝</span>❝ Greetings! I am <b>software developer</b> of Nepali origin,
+          <span className="text-xl ">🤝</span>❝ Greetings! I am <b>software developer</b> of Nepali origin,
           currently pursuing Bachelor of Business Information Systems (Exp. 2025). Rooted in innovation, I consistently conceive novel
           ideas aimed at <b> enhancing lives</b> while staying abreast of evolving tools
           and technologies.❞
@@ -48,7 +48,7 @@ const Landing: FC<LandingProps> = ({}) => {
       
       </div>
       <div className="flex gap-8 flex-col items-center justify-items-center">
-        <h1 className="text-biggest  text-center font-bold">
+        <h1 className="text-h1  text-center font-bold">
           Tools and Technologies I Use
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 w-lg md:w-[750px] px-2">
@@ -81,7 +81,7 @@ const Landing: FC<LandingProps> = ({}) => {
           </div>
         </div>
         <div className="w-lg md:w-[750px] px-4 ">
-          <p className="text-center text-lg">
+          <p className="text-center text-lg  text-p-text dark:text-p-text-dark">
             I'm well-versed in a variety of modern web development tools,
             frameworks, and databases, enabling me to create <b>dynamic </b> and
            <b> efficient</b> digital solutions.

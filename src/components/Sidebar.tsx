@@ -47,7 +47,7 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
             <li className="group" onClick={() => setShow(false)}>
               <Link
                 href={option.href}
-                className="text-gray-700 hover:text-purple-800 dark:hover:text-slate-900 hover:bg-gray-50 group flex gap-3 p-2 text-sm  dark:text-slate-200 items-center "
+                className="text-gray-700 hover:text-purple-800 dark:hover:text-slate-900 hover:bg-gray-50 group flex gap-3 p-2   dark:text-slate-200 items-center "
               >
                 <Icon size={20} />
                 <span className="truncate">{option.name}</span>
@@ -56,14 +56,14 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
           );
         })}
         <div
-          className="hover:bg-slate-100 dark:hover:text-slate-900  p-2  dark:text-slate-100 flex gap-4 cursor-pointer text-sm"
+          className="hover:bg-slate-100 dark:hover:text-slate-900  p-2  dark:text-slate-100 flex gap-4 cursor-pointer text"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {theme === "dark" ? <Sun size={20} /> : <Moon size={18} />}{" "}
           {theme === "dark" ? "Light" : "Dark"} Mode
         </div>
       </div>
-      <div className="text-sm mt-auto px-2 flex items-center gap-4">
+      <div className=" mt-auto px-2 flex items-center gap-4">
         <div className="flex flex-col">
 
         <span className="dark:text-slate-100">Social Links</span>
@@ -80,9 +80,9 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
             <BsGithub className=" text-primary dark:text-white" />
           </a>
         </div>
-      </div>
       <div className="pb-2 dark:text-slate-100">
-       <span className=" px-2 text-xs italic"> &copy; Amrit Niure 2023</span>
+       <span className=" px-2 text-sm italic"> &copy; Amrit Niure 2023</span>
+      </div>
       </div>
     </div>
   );

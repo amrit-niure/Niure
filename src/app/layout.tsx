@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Providers from '@/app/providers'
 import {Poppins,K2D,Space_Grotesk} from 'next/font/google'
+import ModeIcon from '@/components/ModeIcon'
 interface LandingProps {}
 const k2d = K2D({subsets: ['latin'], weight: ['400','500','600','700','800']})
 const poppins = Poppins({subsets: ["latin"], weight: '400'})
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='light' style={{colorScheme : 'light'}} >
-      <body className={`${k2d.className} bg-slate-50 dark:bg-dark-background`}>
+      <body className={`${poppins.className} bg-slate-50 dark:bg-dark-background`}>
         <Providers>
         <Navbar />
         <div className='bg-slate-50 dark:bg-dark-background  transition-all ease-in-out duration-200 '>
@@ -29,8 +30,11 @@ export default function RootLayout({
         {children}
         </div>
         <div className='box'>
-
+      
         <Footer />
+        </div>
+        <div className="fixed md:hidden top-[90vh] right-2 z-50">
+        <ModeIcon />
         </div>
         </Providers>
       </body>
