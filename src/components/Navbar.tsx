@@ -18,6 +18,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </Link>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-4 dark:text-primary-light">
+          <Link href={"/about"} className=" hover:opacity-80">
+            Self-Potrait
+          </Link>
+          <Link href={"/projects"} className=" hover:opacity-80">
+            Projects
+          </Link>
           <Link href={"/posts"} className=" hover:opacity-80">
             Posts
           </Link>

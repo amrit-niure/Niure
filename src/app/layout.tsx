@@ -21,10 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='light' style={{colorScheme : 'light'}} >
-      <body className={`${k2d.className} bg-slate-50 dark:bg-slate-900`}>
+      <body className={`${k2d.className} bg-slate-50 dark:bg-dark-background`}>
         <Providers>
         <Navbar />
-        <div className='bg-slate-50 dark:bg-slate-900  transition-all ease-in-out duration-200 '>
+        <div className='bg-slate-50 dark:bg-dark-background  transition-all ease-in-out duration-200 '>
 
         {children}
         </div>

@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         'primary' : '#6b21a8',  //purple-800
-        'primary-light' : '#f1f5f9',  //purple-800
+        'primary-light' : '#f1f5f9',  //purple-100
         'secondary' : '#c084fc', //purple-400
         'primary-dark' : '#0f172a', // slate-900
         'light-gray': '#14b8a6', //teal-500

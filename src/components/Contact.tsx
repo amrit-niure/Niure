@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { useFormik,FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { BiMailSend, BiMessageRounded } from "react-icons/bi";
-import { ArrowRight, Pen } from "lucide-react";
+import { RiSendPlaneFill} from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiTwotonePhone } from "react-icons/ai";
 import Button from "./Button";
@@ -121,7 +121,7 @@ onSubmitProps.resetForm()
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.name}
-                className=" border-[3px] border-light-gray bg-background outline-none px-6 py-4 rounded-xl dark:bg-primary-dark  "
+                className=" border-[3px] border-light-gray bg-background outline-none px-6 py-4 rounded-xl dark:bg-primary-dark bg-light-background  "
               />
               {formik.touched.name && formik.errors.name ? (
               <div className="text-red-400">{formik.errors.email}</div>
@@ -138,7 +138,7 @@ onSubmitProps.resetForm()
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
-                className=" border-[3px] border-light-gray bg-background outline-none px-6 py-4 w-full rounded-xl  dark:bg-primary-dark "
+                className=" border-[3px] border-light-gray bg-background outline-none px-6 py-4 w-full rounded-xl  dark:bg-primary-dark bg-light-background  "
               />
               {formik.touched.email && formik.errors.email ? (
                 <div className="text-red-400">{formik.errors.email}</div>
@@ -156,14 +156,14 @@ onSubmitProps.resetForm()
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.project}
-                className=" border-[3px] border-light-gray bg-background outline-none px-6 py-4 w-full rounded-xl resize-none dark:bg-primary-dark "
+                className=" border-[3px] border-light-gray bg-background outline-none px-6 py-4 w-full rounded-xl resize-none dark:bg-primary-dark bg-light-background "
               ></textarea>
               {formik.touched.project && formik.errors.project ? (
               <div className="text-red-400">{formik.errors.email}</div>
               ) : null}
             </div>
 
-            <Button type="submit" className="text-lg w-fit" size={"lg"}>Send </Button>
+            <Button type="submit" className="text-lg w-fit flex gap-2" size={"lg"}>Send  <RiSendPlaneFill /> </Button>
           </form>
         </div>
       </div>

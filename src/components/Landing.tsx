@@ -30,7 +30,11 @@ const Landing: FC<LandingProps> = ({}) => {
         <p className="text-center text-lg italic pb-4">
           Turning Complex Business Challenges into Elegant Solutions.{" "}
         </p>
+        <div className="flex gap-4 ">
+
+        <Button variant={'outlined'} className="border-primary text-primary hover:border-[3px] "> Resume </Button>
         <Button> 🪶 Hire Me</Button>
+        </div>
       </div>
       <div className="w-full flex flex-col items-center justify-center ">
         <p
@@ -41,6 +45,7 @@ const Landing: FC<LandingProps> = ({}) => {
           ideas aimed at <b> enhancing lives</b> while staying abreast of evolving tools
           and technologies.❞
         </p>
+      
       </div>
       <div className="flex gap-8 flex-col items-center justify-items-center">
         <h1 className="text-biggest  text-center font-bold">
@@ -82,6 +87,7 @@ const Landing: FC<LandingProps> = ({}) => {
            <b> efficient</b> digital solutions.
           </p>
         </div>
+   
       </div>
     </div>
   );
