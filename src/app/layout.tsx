@@ -7,7 +7,7 @@ import {Poppins,K2D,Space_Grotesk} from 'next/font/google'
 import ModeIcon from '@/components/ModeIcon'
 interface LandingProps {}
 const k2d = K2D({subsets: ['latin'], weight: ['400','500','600','700','800']})
-const poppins = Poppins({subsets: ["latin"], weight: '400'})
+const poppins = Poppins({subsets: ["latin"], weight: ['400','500','600','700','800']})
 const space_grotesk = Space_Grotesk({subsets: ["latin"],  weight: ['400','500','600','700']})
 
 export const metadata: Metadata = {
@@ -26,11 +26,9 @@ export default function RootLayout({
         <Providers>
         <Navbar />
         <div className='bg-slate-50 dark:bg-dark-background  transition-all ease-in-out duration-200 '>
-
         {children}
         </div>
         <div className='box'>
-      
         <Footer />
         </div>
         <div className="fixed md:hidden top-[90vh] right-2 z-50">
