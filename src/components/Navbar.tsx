@@ -36,7 +36,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </div>
         {/* Mobile nav */}
         <div className="flex md:hidden">
-          <Menu onClick={() => setShow(true)}  className="dark:text-primary-light"/>
+          <Menu size={28} onClick={() => setShow(true)}  className="dark:text-primary-light"/>
           {show && (
             <Sidebar setShow={setShow} />
           )}

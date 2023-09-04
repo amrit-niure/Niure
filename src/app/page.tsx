@@ -18,12 +18,12 @@ const page: FC<pageProps> = ({}) => {
         <div className="absolute md:fixed top-[0vh] left-2 z-20">
         <FloatingIcons />
         </div>
+
         <Projects />
         <Services />
         <Contact />
-        <div className="fixed md:hidden top-[90vh] right-2 z-20">
-        <ModeIcon />
-        </div>
+   
+      
        
       </div>
     </main>

@@ -44,7 +44,7 @@ const projectsOptions = [
 
 const Projects: FC<ProjectsProps> = ({}) => {
   return (
-    <div className="flexbox  flex-col w-full gap-8 group" id="projects">
+    <div className="flexbox  flex-col w-full gap-8 group " id="projects">
       <div>
         <h1 className="text-center text-h1 font-bold ">
           Projects
@@ -54,7 +54,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
           and skills in action.
         </p>
       </div>
-      <div className="flex flex-wrap gap-4 items-center justify-center">
+      <div className="flex flex-wrap gap-4 items-center justify-center  max-w-[1024px]">
         {/* card  */}
         {projectsOptions.map((project) => (
           <div

@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='light' style={{colorScheme : 'light'}} >
-      <body className={`${poppins.className} bg-slate-50 dark:bg-dark-background`}>
+      <body className={`${k2d.className} bg-slate-50 dark:bg-dark-background`}>
         <Providers>
         <Navbar />
         <div className='bg-slate-50 dark:bg-dark-background  transition-all ease-in-out duration-200 '>
@@ -31,7 +31,7 @@ export default function RootLayout({
         <div className='box'>
         <Footer />
         </div>
-        <div className="fixed md:hidden top-[90vh] right-2 z-50">
+        <div className="fixed md:hidden top-[85vh] right-2 z-50">
         <ModeIcon />
         </div>
         </Providers>

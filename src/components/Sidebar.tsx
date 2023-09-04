@@ -63,26 +63,27 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
           {theme === "dark" ? "Light" : "Dark"} Mode
         </div>
       </div>
-      <div className=" mt-auto px-2 flex items-center gap-4">
-        <div className="flex flex-col">
-
-        <span className="dark:text-slate-100">Social Links</span>
-        <span className="w-28 h-[1px] bg-primary rounded-full "></span>
+      <div className=" mt-auto pb-8">
+        {/* <div className=" px-2 flex items-center gap-4 ">
+          <div className="flex flex-col">
+            <span className="dark:text-slate-100">Social Links</span>
+            <span className="w-28 h-[1px] bg-primary rounded-full "></span>
+          </div>
+          <div className="flex gap-2 ml-auto pr-4">
+            <a
+              href="https://www.linkedin.com/in/amrit-niure-313a75230/"
+              target="_blank"
+            >
+              <BsLinkedin className=" text-primary dark:text-white" />
+            </a>
+            <a href="https://github.com/amrit-niure" target="_blank">
+              <BsGithub className=" text-primary dark:text-white" />
+            </a>
+          </div>
         </div>
-        <div className="flex gap-2 ml-auto pr-4">
-          <a
-            href="https://www.linkedin.com/in/amrit-niure-313a75230/"
-            target="_blank"
-          >
-            <BsLinkedin className=" text-primary dark:text-white" />
-          </a>
-          <a href="https://github.com/amrit-niure" target="_blank">
-            <BsGithub className=" text-primary dark:text-white" />
-          </a>
-        </div>
-      <div className="pb-2 dark:text-slate-100">
-       <span className=" px-2 text-sm italic"> &copy; Amrit Niure 2023</span>
-      </div>
+        <div className="pb-2 dark:text-slate-100">
+          <span className=" px-2 text-sm italic"> &copy; Amrit Niure 2023</span>
+        </div> */}
       </div>
     </div>
   );
