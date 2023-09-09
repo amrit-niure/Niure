@@ -12,19 +12,18 @@ const [posts, setPosts] = useState([])
     event.preventDefault();
     setSearch("");
   };
-useEffect(() =>{
-  const fetchData = async () => {
-    try {
-      const posts = await fetch("http://localhost:3000/api/posts");
-      const jsonPost = await posts.json();
-      setPosts(jsonPost.posts)
-  
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
- fetchData()
-},[])
+// useEffect(() =>{
+//   const fetchData = async () => {
+//     try {
+//       const posts = await fetch("http://localhost:3000/api/posts");
+//       const jsonPost = await posts.json();
+//       setPosts(jsonPost.posts)
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//     }
+//   }
+//  fetchData()
+// },[])
 
   return (
     <div className="flexbox flex-col">
@@ -90,9 +89,9 @@ useEffect(() =>{
         </div>
         <div className='flex flex-col md:flex-row gap-8 flex-wrap justify-between'>
           {" "}
-          {posts?.map((post) => (
+          {/* {posts?.map((post) => (
             <PostCard content={post}  />
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
