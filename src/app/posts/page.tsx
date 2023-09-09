@@ -1,19 +1,12 @@
 "use client"
 import PostCard from "@/components/PostCard";
+import { Posts } from "@/types/types";
 import { CornerRightUp, Dot, Search } from "lucide-react";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
-interface PostsProps {
-  _id: string;
-  category: string;
-  title: string;
-  description: string;
-  tags: string[];
-  image: string;
-}
 
-const Posts: FC<PostsProps> =  ({}) => {
+const Posts: FC<Posts> =  ({}) => {
   const [search, setSearch] = useState("");
 const [posts, setPosts] = useState([])
   const handleSubmit = (event: any) => {
