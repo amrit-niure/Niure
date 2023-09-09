@@ -76,7 +76,7 @@ useEffect(() =>{
               Technology has ushered in a transformative era for the workplace,
               reshaping the very nature of how we work and collaborate. From the
               rise of remote work and digital communication tools to AI-powered
-              automation and data-driven decision-making.{" "}
+              automation and data-driven {" "}
             </p>
             <div className="flex items-center text-slate-500">
               <span>20 Jun 2023</span>
