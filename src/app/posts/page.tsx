@@ -5,8 +5,7 @@ import { CornerRightUp, Dot, Search } from "lucide-react";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
-
-const Posts: FC<Posts> =  ({}) => {
+const PostPage: FC<Posts> =  ({}) => {
   const [search, setSearch] = useState("");
 const [posts, setPosts] = useState([])
   const handleSubmit = (event: any) => {
@@ -100,4 +99,4 @@ useEffect(() =>{
   );
 };
 
-export default Posts;
+export default PostPage;
