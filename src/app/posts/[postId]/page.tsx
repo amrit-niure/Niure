@@ -12,10 +12,13 @@ interface PostProps {
 const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
 
-  const posts = await fetch(`http://www.amritniure.com.np/api/posts/${postId}`);
-  const jsonPost = await posts.json();
-  const postData = jsonPost.post as Posts
+      const posts = await fetch(`https://www.amritniure.com.np/api/posts/${postId}`);   
+      console.log(posts) 
+      const jsonPost = await posts.json();
+      const postData = jsonPost.post;
 
+
+  
   return (
     <div className="flexbox ">
       <div className="container pt-[5vh] flex flex-col md:flex-row w-full ">
@@ -80,6 +83,7 @@ const Post: FC<PostProps> = async ({ params }) => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
