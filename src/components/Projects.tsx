@@ -12,24 +12,24 @@ const projectsOptions = [
     id: 1,
     name: "Confession",
     desc: "Social Confession Sharing App",
-    live: "https://amritniure.com.np",
-    github: "https://github.com/amrit-niure",
-    img: "/projects/jobsportal.png",
-  },
-  {
-    id: 2,
-    name: "Confession",
-    desc: "Social Confession Sharing App",
-    live: "https://amritniure.com.np",
-    github: "https://github.com/amrit-niure",
+    live: "https://confession-three.vercel.app/",
+    github: "https://github.com/amrit-niure/Confession",
     img: "/projects/confession.png",
   },
   {
+    id: 2,
+    name: "Job Hunters",
+    desc: "Jobs Protal App to Connect the Job Seekers and Employers",
+    live: "https://job-hunters.vercel.app/",
+    github: "https://github.com/amrit-niure/Jobs-Portal",
+    img: "/projects/jobsportal.png",
+  },
+  {
     id: 3,
-    name: "Confession",
-    desc: "Social Confession Sharing App",
-    live: "https://amritniure.com.np",
-    github: "https://github.com/amrit-niure",
+    name: "Pegion",
+    desc: "A real time messaging(chat) app.",
+    live: "https://pegion-the-messenger.vercel.app/dashboard",
+    github: "https://github.com/amrit-niure/pegion-the-messenger",
     img: "/projects/confession.png",
   },
   {
@@ -88,7 +88,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
               </div>
               <div className="flex indent-1 absolute bottom-0  bg-white bg-opacity-70  w-full p-2  ">
                 <div className="">
-                  <h1 className="text-h2 font-semibold">Confession</h1>
+                  <h1 className="text-h2 font-semibold">{project.name}</h1>
                   <a href={project.live} target="_blank" className="text-sm  ">
                     <span className="flex items-center gap-2 text-p-text ">
                       Live Demo <MoveRight size={18} />

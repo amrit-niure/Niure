@@ -58,7 +58,7 @@ const Contact: FC<ContactProps> = () => {
         <h2 className="hidden md:flex">Contact Me</h2>
       </div>
 
-      <div className=" px-8 md:px-[8vw] ">
+      <div className=" px-8 md:px-[10vw] ">
         <div className=" flex flex-col md:flex-row gap-16 md:gap-4 ">
           {/* first */}
           <div className="flex-1 flex flex-col gap-8">
@@ -90,7 +90,7 @@ const Contact: FC<ContactProps> = () => {
                   +61 424 562 124
                 </span>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+61424562124"
                   target="_blank"
                   className="contact__button"
                 >
