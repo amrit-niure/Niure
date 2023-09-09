@@ -1,29 +1,29 @@
 "use client"
 import PostCard from "@/components/PostCard";
-import { Posts } from "@/types/types";
+// import { Posts } from "@/types/types";
 import { CornerRightUp, Dot, Search } from "lucide-react";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
-const PostPage: FC<Posts> =  ({}) => {
+const PostPage: FC =  () => {
   const [search, setSearch] = useState("");
 const [posts, setPosts] = useState([])
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setSearch("");
   };
-// useEffect(() =>{
-//   const fetchData = async () => {
-//     try {
-//       const posts = await fetch("http://localhost:3000/api/posts");
-//       const jsonPost = await posts.json();
-//       setPosts(jsonPost.posts)
-//     } catch (error) {
-//       console.error("Error fetching data:", error);
-//     }
-//   }
-//  fetchData()
-// },[])
+useEffect(() =>{
+  const fetchData = async () => {
+    try {
+      const posts = await fetch("http://localhost:3000/api/posts");
+      const jsonPost = await posts.json();
+      setPosts(jsonPost.posts)
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+ fetchData()
+},[])
 
   return (
     <div className="flexbox flex-col">
@@ -89,9 +89,9 @@ const [posts, setPosts] = useState([])
         </div>
         <div className='flex flex-col md:flex-row gap-8 flex-wrap justify-between'>
           {" "}
-          {/* {posts?.map((post) => (
+          {posts?.map((post) => (
             <PostCard content={post}  />
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
