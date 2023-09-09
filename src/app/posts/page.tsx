@@ -15,7 +15,7 @@ const [posts, setPosts] = useState([])
 useEffect(() =>{
   const fetchData = async () => {
     try {
-      const posts = await fetch("https://amritniure.com.np/api/posts");
+      const posts = await fetch("https://www.amritniure.com.np/api/posts");
       const jsonPost = await posts.json();
       setPosts(jsonPost.posts)
     } catch (error) {
