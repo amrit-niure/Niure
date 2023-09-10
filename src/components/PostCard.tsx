@@ -27,7 +27,7 @@ const PostCard: FC<PostCardProps> = ({content}) => {
               {content.title}
           </h1>
           <p className="text-lg text-p-text dark:text-p-text-dark text-justify">
-              {content.description.split(' ').slice(0, 20).join(' ')}...
+              {content.description[0].split(' ').slice(0, 20).join(' ')}...
           </p>
           <div className="flex items-center text-slate-500">
               <span>{content.createdAt.substring(0, 10)}</span>
