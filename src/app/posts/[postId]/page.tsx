@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FC } from "react";
 import parse from "html-react-parser";
 import { CodeBlock, Code } from "@/codeblocks/Codeblock";
+import axios from 'axios'
 interface PostProps {
   params: {
     postId: string;
@@ -12,21 +13,39 @@ interface PostProps {
 
 const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
+  // const [postData, setPostData] = useState<Posts>([])
 
-  const posts = await fetch(
-    `api/posts/${postId}`,
-    {
-      cache: "no-store",
-    }
-  );
-  const jsonPost = await posts.json();
-  const postData = jsonPost.post as Posts;
-  console.log(postData);
+  // try {
+  //   const response = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+  //     cache: "no-store",
+  //   });
+  
+  //   if (!response.ok) {
+  //     throw new Error(`Failed to fetch data: ${response.statusText}`);
+  //   }
+  
+  //   const posts = await response.json();
+  //   // Handle the fetched data here
+  //   const postData = posts.post
+  //   console.log(postData);
+  // } catch (error) {
+  //   console.error("An error occurred:", error);
+  //   // Handle the error appropriately, e.g., show an error message to the user
+  // }
+  // const posts = await axios.get(`api/posts/${postId}`) 
+
+  const response = await fetch(`api/posts/${postId}`, {
+    cache: "no-store",
+  });
 
   const formatContent = (content: string) => {
     const parsedContent = parse(content);
     return parsedContent;
   };
+  const posts = await response.json();
+    // Handle the fetched data here
+    const postData = posts.post
+    console.log(postData);
   const codeExample = `
     import { Formik, Field, Form, ErrorMessage } from 'formik';
   `;
@@ -53,11 +72,19 @@ const Post: FC<PostProps> = async ({ params }) => {
           />
           <div>{formatContent(postData.description[0])}</div>
           <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
-            <CodeBlock language="javascript" code={postData.code[0]}  fileName="ab.txt" />
+            <CodeBlock
+              language="javascript"
+              code={postData.code[0]}
+              fileName="ab.txt"
+            />
           </div>
           <div>{formatContent(postData.description[1])}</div>
           <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
-            <CodeBlock language="javascript" code={postData.code[2]}  fileName="abcd.txt" />
+            <CodeBlock
+              language="javascript"
+              code={postData.code[2]}
+              fileName="abcd.txt"
+            />
           </div>
           <Image
             width={500}
@@ -109,6 +136,7 @@ const Post: FC<PostProps> = async ({ params }) => {
           </div>
         </div>
       </div>
+      hello
     </div>
   );
 };
