@@ -12,13 +12,11 @@ interface PostProps {
 const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
 
-      const posts = await fetch(`https://www.amritniure.com.np/api/posts/${postId}`);   
-      console.log(posts) 
+      const posts = await fetch(`https://www.amritniure.com.np/api/posts/${postId}`,{
+        cache : "no-cache"
+      });   
       const jsonPost = await posts.json();
       const postData = jsonPost.post;
-
-
-  
   return (
     <div className="flexbox ">
       <div className="container pt-[5vh] flex flex-col md:flex-row w-full ">
