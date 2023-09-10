@@ -16,7 +16,8 @@ const [posts, setPosts] = useState([])
 useEffect(() =>{
   const fetchData = async () => {
     try {
-      const posts = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/posts`,{
+      // const posts = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/posts`,{
+      const posts = await fetch(`https://amritniure.com.np/api/posts`,{
         cache : "no-store"
       });
       const jsonPost = await posts.json();
