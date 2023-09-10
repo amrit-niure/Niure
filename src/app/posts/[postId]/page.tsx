@@ -14,7 +14,7 @@ const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
 
   const posts = await fetch(
-    `${process.env.NEXT_PUBLIC_ENDPOINT}/api/posts/${postId}`,
+    `api/posts/${postId}`,
     {
       cache: "no-store",
     }
