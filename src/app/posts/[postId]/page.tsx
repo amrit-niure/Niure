@@ -67,9 +67,9 @@ const Post: FC<PostProps> = async ({ params }) => {
             className="rounded-md self-center"
           />
           <div>{formatContent(postData.description[2])}</div>
-          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
+          {/* <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
             <CodeBlock language="javascript" code={postData.code[2]} fileName="abc.txt" />
-          </div>
+          </div> */}
         </div>
         <div className="md:h-[80vh] md:w-[30%] flex items-center py-16 md md:py-0">
           <div className=" w-full text-primary dark:text-primary-light">

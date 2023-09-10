@@ -62,12 +62,14 @@ const Code: FunctionComponent<CodeBlockProps> = ({ language, code }) => {
    
           onClick={() => {
             navigator.clipboard.writeText(code);
+            toast.success("Copied to Clipboard",{icon: '✔️'})
           }}
           className="absolute right-0 top-0 border-none text-sm hover:bg-transparent hover:text-white outline-none"
         >
           Copy 
           </button>
       </pre>
+      <Toaster />
     </div>
   );
 };
