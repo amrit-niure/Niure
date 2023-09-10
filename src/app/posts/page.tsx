@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
 const PostPage: FC =  () => {
+  console.log(process.env.NEXT_PUBLIC_ENDPOINT)
   const [search, setSearch] = useState("");
 const [posts, setPosts] = useState([])
   const handleSubmit = (event: any) => {
@@ -15,7 +16,7 @@ const [posts, setPosts] = useState([])
 useEffect(() =>{
   const fetchData = async () => {
     try {
-      const posts = await fetch("https://www.amritniure.com.np/api/posts",{
+      const posts = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/posts`,{
         cache : "no-store"
       });
       const jsonPost = await posts.json();
@@ -30,8 +31,8 @@ useEffect(() =>{
 
   return (
     <div className="flexbox flex-col">
-      Hello
-      {/* <div className="flex flex-col container gap-8">
+  
+      <div className="flex flex-col container gap-8">
 
         <div className="flex flex-col  items-center justify-center  gap-2 pt-16">
           <h1 className="text-4xl text-primary dark:text-primary-light font-bold">
@@ -58,7 +59,7 @@ useEffect(() =>{
             </button>
           </form>
         </div>
-    //banner poster
+
         <div className="flex lg:flex-row lg:items-end gap-8 flex-col justify-center items-center px-4 md:px-0 ">
           <Image
             width={500}
@@ -97,7 +98,7 @@ useEffect(() =>{
             <PostCard content={post}  />
           ))}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
