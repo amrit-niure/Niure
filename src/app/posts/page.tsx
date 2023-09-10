@@ -30,8 +30,9 @@ useEffect(() =>{
 
   return (
     <div className="flexbox flex-col">
-      <div className="flex flex-col container gap-8">
-        {/* blog posts and search bar */}
+      Hello
+      {/* <div className="flex flex-col container gap-8">
+
         <div className="flex flex-col  items-center justify-center  gap-2 pt-16">
           <h1 className="text-4xl text-primary dark:text-primary-light font-bold">
             Blog Posts
@@ -57,7 +58,7 @@ useEffect(() =>{
             </button>
           </form>
         </div>
-        {/* banner poster */}
+    //banner poster
         <div className="flex lg:flex-row lg:items-end gap-8 flex-col justify-center items-center px-4 md:px-0 ">
           <Image
             width={500}
@@ -96,20 +97,9 @@ useEffect(() =>{
             <PostCard content={post}  />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 export default PostPage;
-
-
-// import { FC } from 'react';
-
-// interface PostPageProps {};
-
-// const PostPage: FC<PostPageProps> = ({}) => {
-//   return <div> Page Post  </div>;
-// };
-
-// export default PostPage;
