@@ -15,7 +15,7 @@ const PostCard: FC<PostCardProps> = ({content}) => {
       <Image
           width={400}
           height={300}
-          src={content.image}
+          src={content.image[0]}
           alt="laptop photo"
           className="rounded-md md:max-w-[300px]"
       />
