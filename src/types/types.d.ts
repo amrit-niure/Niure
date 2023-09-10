@@ -8,11 +8,13 @@ interface Options {
 }
 interface Posts  {
     _id: string;
-    category: string;
+    category: string[];
     title: string;
-    description: string;
+    description: string[];
     tags: string[];
-    image: string;
+    image: string[];
+    code: string[];
+    quote: string[];
     createdAt : string;
     updatedAt : string;
 }

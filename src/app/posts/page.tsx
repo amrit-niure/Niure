@@ -16,10 +16,11 @@ useEffect(() =>{
   const fetchData = async () => {
     try {
       const posts = await fetch("https://www.amritniure.com.np/api/posts",{
-        cache : "no-cache"
+        cache : "no-store"
       });
       const jsonPost = await posts.json();
       setPosts(jsonPost.posts)
+      console.log(jsonPost.posts)
     } catch (error) {
       console.error("Error fetching data:", error);
     }
