@@ -18,7 +18,7 @@ useEffect(() =>{
     try {
       const posts = await fetch(`api/posts/`,{
       // const posts = await fetch(`api/posts`,{
-        cache : "no-store"
+        cache : "reload"
       });
       const jsonPost = await posts.json();
       setPosts(jsonPost.posts)
