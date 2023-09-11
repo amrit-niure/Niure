@@ -13,39 +13,22 @@ interface PostProps {
 
 const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
-  // const [postData, setPostData] = useState<Posts>([])
 
-  // try {
-  //   const response = await fetch(`http://localhost:3000/api/posts/${postId}`, {
-  //     cache: "no-store",
-  //   });
-  
-  //   if (!response.ok) {
-  //     throw new Error(`Failed to fetch data: ${response.statusText}`);
-  //   }
-  
-  //   const posts = await response.json();
-  //   // Handle the fetched data here
-  //   const postData = posts.post
-  //   console.log(postData);
-  // } catch (error) {
-  //   console.error("An error occurred:", error);
-  //   // Handle the error appropriately, e.g., show an error message to the user
-  // }
-  // const posts = await axios.get(`api/posts/${postId}`) 
-
-  const response = await fetch(`api/posts/${postId}`, {
-    cache: "no-store",
+  // const posts = await fetch(`api/posts/${postId}`,{
+  const posts = await fetch(`https://www.amritniure.com.np/api/posts/${postId}`,{
+    cache : "no-store"
   });
+  const jsonPost = await posts.json();
+ // Handle the fetched data here
+ const postData = jsonPost.post
+ console.log(postData);
 
   const formatContent = (content: string) => {
     const parsedContent = parse(content);
     return parsedContent;
   };
-  const posts = await response.json();
-    // Handle the fetched data here
-    const postData = posts.post
-    console.log(postData);
+
+   
   const codeExample = `
     import { Formik, Field, Form, ErrorMessage } from 'formik';
   `;
