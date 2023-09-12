@@ -19,7 +19,7 @@ const Post: FC<PostProps> = async ({ params }) => {
   });
   const jsonPost = await posts.json(); 
  // Handle the fetched data here
- const postData = jsonPost.post
+ const postData = jsonPost.post as Posts
  console.log(postData);
 
   const formatContent = (content: string) => {
@@ -45,7 +45,7 @@ const Post: FC<PostProps> = async ({ params }) => {
             <Dot size={35} />
             <span className="pr-2">5 min read</span>
           </div>
-          <Image
+          {/* <Image
             width={500}
             height={400}
             src={postData.image[0]}
@@ -75,7 +75,7 @@ const Post: FC<PostProps> = async ({ params }) => {
             alt="laptop photo"
             className="rounded-md self-center"
           />
-          <div>{formatContent(postData.description[2])}</div>
+          <div>{formatContent(postData.description[2])}</div> */}
           {/* <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
             <CodeBlock language="javascript" code={postData.code[2]} fileName="abc.txt" />
           </div> */}
@@ -118,7 +118,7 @@ const Post: FC<PostProps> = async ({ params }) => {
           </div>
         </div>
       </div>
-      hello
+ 
     </div>
   );
 };
