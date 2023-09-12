@@ -40,7 +40,7 @@ const Post: FC<PostProps> = async ({ params }) => {
   `;
 
   return (
-    <div className="flexbox ">
+    <div className="flexbox overflow-x-auto">
       <div className="container pt-[5vh] px-4  flex flex-col md:flex-row w-full md:gap-8 md:px-0">
         <div className="text-primary dark:text-primary-light flex flex-col gap-4 md:w-[70%]">
           <span className="bg-primary dark:bg-light-dark-background text-primary-light px-4 py-2 rounded-md w-fit">

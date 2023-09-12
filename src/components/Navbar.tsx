@@ -14,19 +14,21 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <header className="sticky top-0 left-0 flexbox bg-light-background dark:bg-dark-background shadow-sm transition-all ease-in-out duration-200 z-10">
       <nav className="container h-header flex items-center text-primary w-full ">
         <Link href={"/"} className=" mr-auto dark:text-primary-light text-lg">
-  Amrit      <b className="text-3xl">Niure.</b>
+        <b className="text-3xl">Niure.</b>
         </Link>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-4 dark:text-primary-light text-lg">
-          <Link href={"/"} className=" hover:opacity-80">
-            Self-Potrait
-          </Link>
-          <Link href={"#projects"} className=" hover:opacity-80">
-            Projects
-          </Link>
-          <Link href={"/posts"} className=" hover:opacity-80">
+        <Link href={"/posts"} className=" hover:opacity-80">
             Posts
           </Link>
+          <Link href={"/projects"} className=" hover:opacity-80">
+            Projects
+          </Link>
+          <Link href={"/about"} className=" hover:opacity-80">
+            About
+          </Link>
+       
+     
           <div
             className="hover:bg-primary-light dark:hover:text-primary-dark rounded-full p-2  dark:text-primary-light"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
