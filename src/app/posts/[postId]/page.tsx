@@ -14,11 +14,10 @@ interface PostProps {
 const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
 
-  // const posts = await fetch(`api/posts/${postId}`,{
-  const posts = await fetch(`https://www.amritniure.com.np/api/posts/${postId}`,{
+  const posts = await fetch(`api/posts/${postId}`,{
     cache : "no-store"
   });
-  const jsonPost = await posts.json();
+  const jsonPost = await posts.json(); 
  // Handle the fetched data here
  const postData = jsonPost.post
  console.log(postData);

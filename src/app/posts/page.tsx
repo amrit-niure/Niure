@@ -16,9 +16,9 @@ const [posts, setPosts] = useState([])
 useEffect(() =>{
   const fetchData = async () => {
     try {
-      const posts = await fetch(`api/posts/`,{
-      // const posts = await fetch(`api/posts`,{
-        next: { revalidate: 0 } 
+      // const posts = await fetch(`api/posts/`,{
+      const posts = await fetch(`http://localhost:3000/api/posts`,{
+
       });
       const jsonPost = await posts.json();
       setPosts(jsonPost.posts)

@@ -1,6 +1,7 @@
 import connectionDB from "@/lib/database";
 import { NextResponse } from "next/server";
 import Post from '@/modal/blogSchema'
+export const dynamic = "force-dynamic"
 export async function GET(req:Request){
     try {
         await connectionDB()
