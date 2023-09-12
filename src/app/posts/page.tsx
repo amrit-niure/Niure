@@ -17,7 +17,7 @@ useEffect(() =>{
   const fetchData = async () => {
     try {
       // const posts = await fetch(`api/posts/`,{
-      const posts = await fetch(`/api/posts`,{
+      const posts = await fetch(`api/posts`,{
       });
       const jsonPost = await posts.json();
       setPosts(jsonPost.posts)

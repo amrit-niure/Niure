@@ -14,7 +14,7 @@ interface PostProps {
 const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
 
-  const posts = await fetch(`http://localhost:3000/api/posts/${postId}`,{
+  const posts = await fetch(`api/posts/${postId}`,{
     cache : "no-store"
   });
   const jsonPost = await posts.json(); 
