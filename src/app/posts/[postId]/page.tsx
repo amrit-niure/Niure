@@ -36,16 +36,16 @@ const Post: FC<PostProps> = async ({ params }) => {
     <div className="flexbox ">
       <div className="container pt-[5vh] flex flex-col md:flex-row w-full md:gap-8 ">
         <div className="text-primary dark:text-primary-light flex flex-col gap-4 md:w-[70%]">
-          {/* <span className="bg-primary dark:bg-light-dark-background text-primary-light px-4 py-2 rounded-md w-fit">
+          <span className="bg-primary dark:bg-light-dark-background text-primary-light px-4 py-2 rounded-md w-fit">
             {postData.category}
-          </span> */}
+          </span>
           <h1 className="text-3xl font-semibold">{postData.title}</h1>
-          {/* <div className="flex items-center text-slate-500">
+          <div className="flex items-center text-slate-500">
             <span>{postData.createdAt}</span>
             <Dot size={35} />
             <span className="pr-2">5 min read</span>
-          </div> */}
-          {/* <Image
+          </div>
+          <Image
             width={500}
             height={400}
             src={postData.image[0]}
@@ -75,10 +75,10 @@ const Post: FC<PostProps> = async ({ params }) => {
             alt="laptop photo"
             className="rounded-md self-center"
           />
-          <div>{formatContent(postData.description[2])}</div> */}
-          {/* <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
+          <div>{formatContent(postData.description[2])}</div>
+          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
             <CodeBlock language="javascript" code={postData.code[2]} fileName="abc.txt" />
-          </div> */}
+          </div>
         </div>
         <div className="md:h-[80vh] md:w-[30%] flex items-center py-16 md md:py-0">
           <div className=" w-full text-primary dark:text-primary-light">
