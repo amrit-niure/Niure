@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FC } from "react";
 import parse from "html-react-parser";
 import { CodeBlock, Code } from "@/codeblocks/Codeblock";
-import axios from 'axios'
+import axios from "axios";
 interface PostProps {
   params: {
     postId: string;
@@ -13,36 +13,35 @@ interface PostProps {
 
 const Post: FC<PostProps> = async ({ params }) => {
   let apiUrl;
-if (process.env.NODE_ENV === 'production') {
-  // Set the production API URL
-  apiUrl = 'https://www.amritniure.com.np';
-} else {
-  // Set the development API URL
-  apiUrl = 'http://localhost:3000'; // Replace with your development API URL
-}
+  if (process.env.NODE_ENV === "production") {
+    // Set the production API URL
+    apiUrl = "https://www.amritniure.com.np";
+  } else {
+    // Set the development API URL
+    apiUrl = "http://localhost:3000"; // Replace with your development API URL
+  }
   const { postId } = params;
 
-  const posts = await fetch(`${process.env.ENDPOINT}/api/posts/${postId}`,{
-    cache : "no-store"
+  const posts = await fetch(`${process.env.ENDPOINT}/api/posts/${postId}`, {
+    cache: "no-store",
   });
-  const jsonPost = await posts.json(); 
- // Handle the fetched data here
- const postData = jsonPost.post
- console.log(postData);
+  const jsonPost = await posts.json();
+  // Handle the fetched data here
+  const postData = jsonPost.post;
+  console.log(postData);
 
   const formatContent = (content: string) => {
     const parsedContent = parse(content);
     return parsedContent;
   };
 
-   
   const codeExample = `
     import { Formik, Field, Form, ErrorMessage } from 'formik';
   `;
 
   return (
     <div className="flexbox ">
-      <div className="container pt-[5vh] flex flex-col md:flex-row w-full md:gap-8 ">
+      <div className="container pt-[5vh] flex flex-col md:flex-row w-full md:gap-8 px-4 md:px-0">
         <div className="text-primary dark:text-primary-light flex flex-col gap-4 md:w-[70%]">
           <span className="bg-primary dark:bg-light-dark-background text-primary-light px-4 py-2 rounded-md w-fit">
             {postData.category}
@@ -72,7 +71,7 @@ if (process.env.NODE_ENV === 'production') {
           <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
             <CodeBlock
               language="javascript"
-              code={postData.code[2]}
+              code={postData.code[1]}
               fileName="abcd.txt"
             />
           </div>
@@ -84,9 +83,13 @@ if (process.env.NODE_ENV === 'production') {
             className="rounded-md self-center"
           />
           <div>{formatContent(postData.description[2])}</div>
-          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
-            <CodeBlock language="javascript" code={postData.code[2]} fileName="abc.txt" />
-          </div>
+          {postData.code.length >= 3 && postData.code[2] !== "" && (
+            <CodeBlock
+              language="javascript"
+              code={postData.code[2]}
+              fileName="abcd.txt"
+            />
+          )}
         </div>
         <div className="md:h-[80vh] md:w-[30%] flex items-center py-16 md md:py-0">
           <div className=" w-full text-primary dark:text-primary-light">
@@ -126,7 +129,6 @@ if (process.env.NODE_ENV === 'production') {
           </div>
         </div>
       </div>
- 
     </div>
   );
 };
