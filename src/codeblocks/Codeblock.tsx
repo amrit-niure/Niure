@@ -20,8 +20,8 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({ language, code,fileName 
   );
 
   return (
-    <div className="rounded-md">
-      <div className="w-full border-b-2 relative flex  items-center justify-between pr-2 rounded-md bg-black ">
+    <div className="rounded-md overflow-x-scroll">
+      <div className="w-full border-b-2 relative flex  items-center justify-between pr-2 rounded-md bg-black overflow-x-hidden">
         <span className="text-sm">{fileName}</span>
         <Button
           variant={"ghost"}
@@ -35,7 +35,7 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({ language, code,fileName 
           Copy <Clipboard size={15} />
         </Button>
       </div>
-      <pre   className="py-2">
+      <pre   className="py-2 ">
         <code
           dangerouslySetInnerHTML={{ __html: highlightedCode }}
         
@@ -52,8 +52,8 @@ const Code: FunctionComponent<CodeBlockProps> = ({ language, code }) => {
     language
   );
   return (
-    <div className="rounded-md relative">
-      <pre className="relative">
+    <div className="rounded-md relative  ">
+      <pre className="relative ">
         <code
           dangerouslySetInnerHTML={{ __html: highlightedCode }}
           className=""
