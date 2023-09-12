@@ -41,7 +41,7 @@ const Post: FC<PostProps> = async ({ params }) => {
           </span>
           <h1 className="text-3xl font-semibold">{postData.title}</h1>
           <div className="flex items-center text-slate-500">
-            <span>{postData.createdAt.substring(0, 10)}</span>
+            <span>{postData.createdAt}</span>
             <Dot size={35} />
             <span className="pr-2">5 min read</span>
           </div>
