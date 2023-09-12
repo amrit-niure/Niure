@@ -14,12 +14,12 @@ interface PostProps {
 const Post: FC<PostProps> = async ({ params }) => {
   const { postId } = params;
 
-  const posts = await fetch(`https://amritniure.com.np/api/posts/${postId}`,{
+  const posts = await fetch(`http://www.amritniure.com.np/api/posts/${postId}`,{
     cache : "no-store"
   });
   const jsonPost = await posts.json(); 
  // Handle the fetched data here
- const postData = jsonPost.post as Posts
+ const postData = jsonPost.post
  console.log(postData);
 
   const formatContent = (content: string) => {
@@ -36,15 +36,15 @@ const Post: FC<PostProps> = async ({ params }) => {
     <div className="flexbox ">
       <div className="container pt-[5vh] flex flex-col md:flex-row w-full md:gap-8 ">
         <div className="text-primary dark:text-primary-light flex flex-col gap-4 md:w-[70%]">
-          <span className="bg-primary dark:bg-light-dark-background text-primary-light px-4 py-2 rounded-md w-fit">
+          {/* <span className="bg-primary dark:bg-light-dark-background text-primary-light px-4 py-2 rounded-md w-fit">
             {postData.category}
-          </span>
+          </span> */}
           <h1 className="text-3xl font-semibold">{postData.title}</h1>
-          <div className="flex items-center text-slate-500">
+          {/* <div className="flex items-center text-slate-500">
             <span>{postData.createdAt}</span>
             <Dot size={35} />
             <span className="pr-2">5 min read</span>
-          </div>
+          </div> */}
           {/* <Image
             width={500}
             height={400}
