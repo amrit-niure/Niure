@@ -12,9 +12,17 @@ interface PostProps {
 }
 
 const Post: FC<PostProps> = async ({ params }) => {
+  let apiUrl;
+if (process.env.NODE_ENV === 'production') {
+  // Set the production API URL
+  apiUrl = 'https://www.amritniure.com.np';
+} else {
+  // Set the development API URL
+  apiUrl = 'http://localhost:3000'; // Replace with your development API URL
+}
   const { postId } = params;
 
-  const posts = await fetch(`http://www.amritniure.com.np/api/posts/${postId}`,{
+  const posts = await fetch(`${process.env.ENDPOINT}/api/posts/${postId}`,{
     cache : "no-store"
   });
   const jsonPost = await posts.json(); 
