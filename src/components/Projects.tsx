@@ -60,7 +60,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
         {/* card  */}
         {projectsOptions.map((project) => (
           <div
-            className="flex px-4 py-4 bg-white dark:bg-light-dark-background rounded-sm shadow-lg dark:text-primary-light cursor-pointer border-light-background border-[1px] dark:border-dark-background dark:hover:border-light-gray w-[420px] md:w-[500px] h-[600px] transition-all duration-100 "
+            className="flex px-4 py-4 bg-white dark:bg-light-dark-background rounded-sm shadow-lg dark:text-primary-light cursor-pointer border-light-background border-[1px] dark:border-dark-background dark:hover:border-light-gray w-[420px] md:w-[500px]  transition-all duration-100 "
             key={project.id}
           >
             {/* <div className="relative overflow-hidden group h-full w-full "> */}
@@ -107,7 +107,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 </Link>
               </div> */}
 
-              <h1 className="text-h1 font-semibold self-start ">
+              <h1 className="text-bigger font-semibold self-start ">
                 {project.name}
               </h1>
               <div className="flex gap-2 flex-wrap">
@@ -122,10 +122,10 @@ const Projects: FC<ProjectsProps> = ({}) => {
                 height={600}
                 alt="project"
                 src={project.img}
-                className="rounded-sm transform scale-100 hover:scale-105 transition-transform duration-300 relative w-[500px] flex items-center justify-center  h-[300px] "
+                className="rounded-sm transform scale-100 hover:scale-105 transition-transform duration-300 relative w-[500px] flex items-center justify-center h-[300px] "
               />
-              <p className="text-sm dark:text-light-gray text-p-text">
-                {project.desc}
+              <p className="text- dark:text-light-gray text-p-text">
+                {project.desc.split(' ').slice(0, 20).join(' ')}..
               </p>
               <div className="self-start flex gap-4 text-sm">
                 <Tooltip title="Live" arrow>
