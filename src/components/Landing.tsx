@@ -11,14 +11,22 @@ import {
   Tailwind,
   Prisma,
 } from "@/components/Icons/svg";
+import Image from "next/image";
 
 interface LandingProps {}
 const Landing: FC<LandingProps> = ({}) => {
   return (
     <div
-      className={`px-4 flex gap-16 flex-col items-center  justify-center pt-[15vh]  md:pt-[25vh] text-lg`}
+      className={`px-4 flex gap-16 flex-col items-center  justify-center pt-[15vh]  md:pt-[15vh] text-lg`}
     >
       <div className="flex gap-2 flex-col items-center justify-center">
+      <Image
+            width={250}
+            height={250}
+            src={'/assets/profile.png'}
+            alt="laptop photo"
+            className="rounded-full self-center  w-[150px] h-[150px] px-4 pt-4 bg-light-dark-background dark:bg-black shadow-lg dark:border-slate-700 border-[.15rem] "
+          />
         <h1 className="text-3xl text-center ">
           <span className="text-4xl">👋</span>, I am{" "}
           <span className="font-bold ">Amrit Niure , </span> <br />
