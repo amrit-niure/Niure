@@ -20,8 +20,8 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({ language, code,fileName 
   );
 
   return (
-    <div className="rounded-md overflow-x-scroll">
-      <div className="w-full border-b-2 relative flex  items-center justify-between pr-2 rounded-md bg-black overflow-x-hidden">
+    <div className="rounded-md relative">
+      <div className="w-full border-b-2  flex  items-center justify-between pr-2 rounded-md bg-black ">
         <span className="text-sm">{fileName}</span>
         <Button
           variant={"ghost"}
@@ -30,17 +30,19 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({ language, code,fileName 
             navigator.clipboard.writeText(code);
             toast.success("Copied to Clipboard",{icon: '✔️'})
           }}
-          className="absoulte right-2 border-none text-sm hover:bg-transparent hover:text-white outline-none"
+          className=" border-none text-sm hover:bg-transparent hover:text-white outline-none"
         >
           Copy <Clipboard size={15} />
         </Button>
       </div>
-      <pre   className="py-2 ">
+      <div className="p-2 ">
+      <pre>
         <code
           dangerouslySetInnerHTML={{ __html: highlightedCode }}
         
         />
       </pre>
+      </div>
       <Toaster />
     </div>
   );

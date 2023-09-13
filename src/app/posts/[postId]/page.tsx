@@ -40,7 +40,7 @@ const Post: FC<PostProps> = async ({ params }) => {
   `;
 
   return (
-    <div className="flexbox overflow-x-scroll">
+    <div className="flexbox overflow-hidden ">
       <div className="container pt-[5vh] px-4  flex flex-col md:flex-row w-full md:gap-8 md:px-0">
         <div className="text-primary dark:text-primary-light flex flex-col gap-4 md:w-[70%]">
           <span className="bg-primary dark:bg-light-dark-background text-primary-light px-4 py-2 rounded-md w-fit">
@@ -60,7 +60,7 @@ const Post: FC<PostProps> = async ({ params }) => {
             className="rounded-md self-center"
           />
           <div>{formatContent(postData.description[0])}</div>
-          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
+          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md ">
             <CodeBlock
               language="javascript"
               code={postData.code[0]}
@@ -68,7 +68,7 @@ const Post: FC<PostProps> = async ({ params }) => {
             />
           </div>
           <div>{formatContent(postData.description[1])}</div>
-          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md">
+          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md border-2 border-yellow-600 overflow-x-scroll  ">
             <CodeBlock
               language="javascript"
               code={postData.code[1]}
