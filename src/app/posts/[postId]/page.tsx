@@ -68,7 +68,7 @@ const Post: FC<PostProps> = async ({ params }) => {
             />
           </div>
           <div>{formatContent(postData.description[1])}</div>
-          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md border-2 border-yellow-600 overflow-x-scroll  ">
+          <div className="bg-primary-dark px-2 text-white dark:bg-black rounded-md  overflow-x-scroll  ">
             <CodeBlock
               language="javascript"
               code={postData.code[1]}

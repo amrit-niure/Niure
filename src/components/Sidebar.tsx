@@ -18,18 +18,18 @@ const Sidebar: FC<SidebarProps> = ({ setShow }) => {
       Icon: BookOpen,
       href: "/posts",
     },
-    {
-      id: 2,
-      name: "Projects",
-      Icon: Code,
-      href: "/projects",
-    },
-    {
-      id: 3,
-      name: "About",
-      Icon: User2,
-      href: "/about",
-    },
+    // {
+    //   id: 2,
+    //   name: "Projects",
+    //   Icon: Code,
+    //   href: "/projects",
+    // },
+    // {
+    //   id: 3,
+    //   name: "About",
+    //   Icon: User2,
+    //   href: "/about",
+    // },
   ];
   return (
     <div className="absolute top-0 right-0 flex flex-col bg-slate-100 w-[200px] h-[100vh] text-primary transition ease-in-out duration-200 dark:bg-slate-900 z-10">

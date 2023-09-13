@@ -21,12 +21,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <Link href={"/posts"} className=" hover:opacity-80">
             Posts
           </Link>
-          <Link href={"/projects"} className=" hover:opacity-80">
+          {/* <Link href={"/projects"} className=" hover:opacity-80">
             Projects
           </Link>
           <Link href={"/about"} className=" hover:opacity-80">
             About
-          </Link>
+          </Link> */}
        
      
           <div
