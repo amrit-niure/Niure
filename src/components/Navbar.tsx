@@ -33,7 +33,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
             className="hover:bg-primary-light dark:hover:text-primary-dark rounded-full p-2  dark:text-primary-light"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            {theme === "dark"? <Sun size={20} /> : <Moon size={20} />}
           </div>
         </div>
         {/* Mobile nav */}

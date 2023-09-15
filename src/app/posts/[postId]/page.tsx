@@ -14,31 +14,21 @@ interface PostProps {
 const Post: FC<PostProps> = async ({ params }) => {
   let apiUrl;
   if (process.env.NODE_ENV === "production") {
-    // Set the production API URL
     apiUrl = "https://www.amritniure.com.np";
   } else {
-    // Set the development API URL
-    apiUrl = "http://localhost:3000"; // Replace with your development API URL
+    apiUrl = "http://localhost:3000"; 
   }
   const { postId } = params;
-
   const posts = await fetch(`${process.env.ENDPOINT}/api/posts/${postId}`, {
     cache: "no-store",
   });
   const jsonPost = await posts.json();
-  // Handle the fetched data here
   const postData = jsonPost.post;
-  console.log(postData);
 
   const formatContent = (content: string) => {
     const parsedContent = parse(content);
     return parsedContent;
   };
-
-  const codeExample = `
-    import { Formik, Field, Form, ErrorMessage } from 'formik';
-  `;
-
   return (
     <div className="flexbox overflow-hidden ">
       <div className="container pt-[5vh] px-4  flex flex-col md:flex-row w-full md:gap-8 md:px-0">

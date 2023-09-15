@@ -9,7 +9,6 @@ interface PostCardProps {
 
 const PostCard: FC<PostCardProps> = ({content}) => {
   const router = useRouter()
-  console.log('content',content)
   return (
   <div className="flex gap-8 flex-col  items-center cursor-pointer" key={content._id} onClick={() => router.push(`/posts/${content._id}`)}>
       <Image

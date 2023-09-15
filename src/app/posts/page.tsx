@@ -1,39 +1,42 @@
-"use client"
+"use client";
+import Loading from "@/components/Loading";
 import PostCard from "@/components/PostCard";
 // import { Posts } from "@/types/types";
 import { CornerRightUp, Dot, Search } from "lucide-react";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
-const PostPage: FC =  () => {
-  console.log(process.env.NEXT_PUBLIC_ENDPOINT)
+const PostPage: FC = () => {
+  console.log(process.env.NEXT_PUBLIC_ENDPOINT);
   const [search, setSearch] = useState("");
-const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState([]);
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setSearch("");
   };
-useEffect(() =>{
-  const fetchData = async () => {
-    try {
-      // const posts = await fetch(`api/posts/`,{
-      const posts = await fetch(`api/posts`,{
-      });
-      const jsonPost = await posts.json();
-      setPosts(jsonPost.posts)
-      console.log(jsonPost.posts)
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
- fetchData()
-},[])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // await new Promise(resolve => setTimeout(resolve, 5000))
+        const posts = await fetch(`api/posts`, {});
+        const jsonPost = await posts.json();
+        setPosts(jsonPost.posts);
+        setLoading(false)
+      } catch (error) {
+        setLoading(false)
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+if(loading){
+  return (<Loading />)
+}
 
   return (
     <div className="flexbox flex-col">
-  
       <div className="flex flex-col container gap-8">
-
         <div className="flex flex-col  items-center justify-center  gap-2 pt-16">
           <h1 className="text-4xl text-primary dark:text-primary-light font-bold">
             Blog Posts
@@ -79,7 +82,7 @@ useEffect(() =>{
               Technology has ushered in a transformative era for the workplace,
               reshaping the very nature of how we work and collaborate. From the
               rise of remote work and digital communication tools to AI-powered
-              automation and data-driven {" "}
+              automation and data-driven{" "}
             </p>
             <div className="flex items-center text-slate-500">
               <span>20 Jun 2023</span>
@@ -92,10 +95,10 @@ useEffect(() =>{
         <div className="text-h1 text-primary dark:text-p-text-dark font-semibold px-4 md:px-0">
           Recent Posts..
         </div>
-        <div className='flex flex-col md:flex-row gap-8 flex-wrap justify-between'>
+        <div className="flex flex-col md:flex-row gap-8 flex-wrap justify-between">
           {" "}
           {posts?.map((post) => (
-            <PostCard content={post}  />
+            <PostCard content={post} />
           ))}
         </div>
       </div>
