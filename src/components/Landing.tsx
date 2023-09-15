@@ -10,6 +10,7 @@ import {
   Redis,
   Tailwind,
   Prisma,
+  Typescript,
 } from "@/components/Icons/svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -87,6 +88,9 @@ const Landing: FC<LandingProps> = ({}) => {
           </div>
           <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
             <Prisma />
+          </div>
+          <div className="hover:bg-slate-200 px-2 md:px-4 py-2 rounded-lg cursor-pointer ">
+            <Typescript />
           </div>
         </div>
         <div className="w-lg md:w-[750px] px-4 ">
