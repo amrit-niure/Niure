@@ -1,10 +1,9 @@
 import { Posts } from "@/types/types";
-import { CornerRightUp, Dot } from "lucide-react";
+import {  Dot } from "lucide-react";
 import Image from "next/image";
 import { FC } from "react";
 import parse from "html-react-parser";
 import { CodeBlock, Code } from "@/codeblocks/Codeblock";
-import axios from "axios";
 interface PostProps {
   params: {
     postId: string;
