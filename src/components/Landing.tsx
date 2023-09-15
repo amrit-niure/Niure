@@ -12,6 +12,7 @@ import {
   Prisma,
 } from "@/components/Icons/svg";
 import Image from "next/image";
+import Link from "next/link";
 
 interface LandingProps {}
 const Landing: FC<LandingProps> = ({}) => {
@@ -41,7 +42,7 @@ const Landing: FC<LandingProps> = ({}) => {
         <div className="flex gap-4 ">
 
         <Button variant={'outlined'} className="border-primary text-primary hover:border-[3px] "> Resume </Button>
-        <Button> 🪶 Hire Me</Button>
+      <Link href={'#contact'}> <Button> 🪶 Hire Me</Button> </Link>  
         </div>
       </div>
       <div className="w-full flex flex-col items-center justify-center ">

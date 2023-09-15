@@ -51,11 +51,11 @@ const Contact: FC<ContactProps> = () => {
   });
 
   return (
-    <section className="">
+    <section className="" id="contact">
       <Toaster />
       <div className="flexbox flex-col  pb-4">
         <span className="text-h1 font-semibold">Get in Touch</span>
-        <h2 className="hidden md:flex">Contact Me</h2>
+        <h2 className="hidden md:flex" >Contact Me</h2>
       </div>
 
       <div className=" px-8 md:px-[10vw] ">

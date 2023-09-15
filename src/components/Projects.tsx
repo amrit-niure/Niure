@@ -65,47 +65,7 @@ const Projects: FC<ProjectsProps> = ({}) => {
           >
             {/* <div className="relative overflow-hidden group h-full w-full "> */}
             <div className="flex flex-col items-center gap-4">
-              {/* <Image
-                fill
-                alt="project"
-                src={project.img}
-                className="rounded-lg transform scale-100 hover:scale-105 transition-transform duration-300 relative"
-              />
-              <div className="absolute top-0 left-0 w-full h-full  bg-white bg-opacity-0 hover:bg-opacity-60 hover:text-opacity-100  text-opacity-0 transition-all duration-300 rounded-lg flex flex-col items-center justify-center text-primary  ease-in ">
-                <h1 className="text-h2 font-semibold">{project.name}</h1>
-                <p className="text-sm flex items-center gap-1 pb-2">
-                  {project.desc}
-                </p>
-                <div className="flexbox gap-2">
-                  <a href={project.github} target="_blank">
-                    <Tooltip title="GitHub">
-                      <BsGithub className="text-2xl" />
-                    </Tooltip>
-                  </a>
-                  <a href={project.live} target="_blank">
-                    <Tooltip title="Live" arrow>
-                      <AiOutlineLink className="text-2xl" />
-                    </Tooltip>
-                  </a>
-                </div>
-              </div> */}
-              {/* <div className="flex indent-1 absolute bottom-0  bg-white bg-opacity-70  w-full p-2  ">
-                <div className="">
-                  <h1 className="text-h2 font-semibold">{project.name}</h1>
-                  <a href={project.live} target="_blank" className="text-sm  ">
-                    <span className="flex items-center gap-2 text-p-text ">
-                      Live Demo <MoveRight size={18} />
-                    </span>
-                  </a>
-                </div>
-          
-                <Link href="/projects" className="flex gap-2 ml-auto">
-                  <span className=" flex items-center gap-2 mt-auto  text-p-text ">
-                    {" "}
-                    More Info <Info size={18} />{" "}
-                  </span>
-                </Link>
-              </div> */}
+         
 
               <h1 className="text-bigger font-semibold self-start ">
                 {project.name}
