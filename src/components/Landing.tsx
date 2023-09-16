@@ -42,9 +42,11 @@ const Landing: FC<LandingProps> = ({}) => {
           Turning Complex Business Challenges into Elegant Solutions.{" "}
         </p>
         <div className="flex gap-4 ">
+<div className="modal">
 
         <Resume />
-      <Link href={'#contact'}> <Button> 🪶 Hire Me</Button> </Link>  
+</div>
+      <Link href={'#contact'}> <Button> 🪶 Hire</Button> </Link>  
         </div>
       </div>
       <div className="w-full flex flex-col items-center justify-center ">

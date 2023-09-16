@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { useFormik, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { BiMailSend, BiMessageRounded } from "react-icons/bi";
@@ -12,6 +12,7 @@ import { Toaster, toast } from "react-hot-toast";
 interface ContactProps {}
 
 const Contact: FC<ContactProps> = () => {
+  const [loading, setLoading] = useState<boolean>(false)
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
     email: Yup.string()
@@ -39,11 +40,94 @@ const Contact: FC<ContactProps> = () => {
     },
     onSubmitProps: FormikHelpers<MyFormValues>
   ) => {
-    // Handle form submission here
-    toast.success("Message Sent ❤️");
-    onSubmitProps.resetForm();
+    setLoading(true)
+    // Define the API endpoint URL
+    const url = 'http://localhost:3000/api/contact'; 
+  
+    // Create an object with the data to be sent in the request body
+    const data = {
+      name: values.name,
+      email: values.email,
+      project: values.project,
+    };
+  
+    // Create the request options
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', // Set the content type to JSON
+        // Add any other headers your API requires
+      },
+      body: JSON.stringify(data), // Convert the data to JSON format
+    };
+  
+    // Send the POST request using fetch
+    fetch(url, requestOptions)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // Parse the response as JSON
+      })
+      .then(data => {
+        console.log(data); // Handle the response data (if needed)
+        toast.success('Message Sent ❤️');
+        setLoading(false)
+        onSubmitProps.resetForm();
+      })
+      .catch(error => {
+        const onSubmit = (
+  values: {
+    name: string;
+    email: string;
+    project: string;
+  },
+  onSubmitProps: FormikHelpers<MyFormValues>
+) => {
+  // Define the API endpoint URL
+  const url = 'https://api.example.com/submit-form'; // Replace with your API endpoint URL
+
+  // Create an object with the data to be sent in the request body
+  const data = {
+    name: values.name,
+    email: values.email,
+    project: values.project,
   };
 
+  // Create the request options
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json', // Set the content type to JSON
+      // Add any other headers your API requires
+    },
+    body: JSON.stringify(data), // Convert the data to JSON format
+  };
+
+  // Send the POST request using fetch
+  fetch(url, requestOptions)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // Parse the response as JSON
+    })
+    .then(data => {
+      console.log(data); // Handle the response data (if needed)
+      toast.success('Message Sent ❤️');
+      setLoading(false)
+      onSubmitProps.resetForm();
+    })
+    .catch(error => {
+      setLoading(false)
+      console.error('There was a problem with the fetch operation:', error);
+    });
+};
+
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  };
+  
   const formik = useFormik({
     initialValues,
     validationSchema,
@@ -203,6 +287,7 @@ const Contact: FC<ContactProps> = () => {
                 type="submit"
                 className="text-lg w-fit flex gap-2"
                 size={"lg"}
+                isLoading={loading}
               >
                 Send <RiSendPlaneFill />{" "}
               </Button>

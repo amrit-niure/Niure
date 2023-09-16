@@ -7,7 +7,7 @@ import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 
 const PostPage: FC = () => {
-  console.log(process.env.NEXT_PUBLIC_ENDPOINT);
+
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);

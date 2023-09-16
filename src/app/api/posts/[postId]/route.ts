@@ -1,10 +1,10 @@
 import connectionDB from "@/lib/database";
 import { NextResponse } from "next/server";
 import Post from '@/modal/blogSchema'
-export const dynamic = "force-dynamic"
+// export const dynamic = "force-dynamic"
 export async function GET(req: Request, { params }: { params: { postId: string } }) {
     try {
-        await connectionDB()
+        // await connectionDB()
         const { postId } = params
 
         if (!postId) {

@@ -15,7 +15,7 @@ const projectsOptions = [
     live: "https://confession-three.vercel.app/",
     github: "https://github.com/amrit-niure/Confession",
     img: "/projects/confession.png",
-    tags: ["react", "nextjs", "mongodb", "vercel", "expressjs", "formik"],
+    tags: ["react", "express", "mongoose", "node", "yup", "formik","tailwind","reduxtoolkit","jwt"],
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const projectsOptions = [
     live: "https://job-hunters.vercel.app/",
     github: "https://github.com/amrit-niure/Jobs-Portal",
     img: "/projects/jobsportal.png",
-    tags: ["react", "nextjs", "mongodb", "vercel", "expressjs", "formik"],
+    tags: ["react", "node", "mongoose", "yup","jwt" ,"expressjs", "formik","jodit","tailwind","axios" ],
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const projectsOptions = [
     live: "https://pegion-the-messenger.vercel.app/dashboard",
     github: "https://github.com/amrit-niure/pegion-the-messenger",
     img: "/projects/confession.png",
-    tags: ["react", "nextjs", "mongodb", "vercel", "expressjs", "formik"],
+    tags: ["react", "next", "redis", "react-hook-form", "nextauth", "axios","upstash","pusher",'zod'],
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const projectsOptions = [
     live: "https://manager-psi.vercel.app/",
     github: "https://github.com/amrit-niure/manager",
     img: "/projects/manage.png",
-    tags: ["react", "nextjs", "mongodb", "vercel", "expressjs", "formik"],
+    tags: ["react", "tailwind", "vercel"],
   },
 ];
 
