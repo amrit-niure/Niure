@@ -39,9 +39,10 @@ const Resume: FC<ResumeProps> = ({}) => {
             {/* left */}
             <div className="h-full  md:w-[100%]  md:border-r-2 bg-white ">
               <iframe
-                src={"assets/niure.pdf"}
+                src={"assets/amrit_niure_dark.pdf"}
                 className="w-full h-full"
               ></iframe>
+       
             </div>
             {/* right */}
             <div className="md:hidden inset-0 backdrop-blur-3xl  flex">
