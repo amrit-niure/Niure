@@ -51,7 +51,9 @@ const Resume: FC<ResumeProps> = ({}) => {
                   size={"sm"}
                   className="bg-slate-200 text-primary hover:bg-slate-200 border-primary border-2"
                 >
+                  <a href="/assets/amrit_niure_dark.pdf" download="amrit_niure">
                   Download
+                  </a>
                 </Button>
                 <Button
                   size={"sm"}
